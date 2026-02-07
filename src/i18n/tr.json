@@ -34,15 +34,15 @@
     "title": "Teslimat Modeli",
     "model1": {
       "title": "Flexible Development (T&M)",
-      "desc": "Adaptive teams that scale with priorities and collaborate closely with your stakeholders."
+      "desc": "Adaptive teams that scale with your priorities. We work closely with your stakeholders, keep feedback loops short, and ship in steady increments. Ideal when scope evolves but delivery needs to stay predictable."
     },
     "model2": {
       "title": "Turnkey Projects",
-      "desc": "Clear scope delivery with defined outcomes, managed end-to-end by VAGA."
+      "desc": "Clear scope delivery with defined outcomes, managed end-to-end by VAGA. We align on requirements, milestones, and acceptance criteria upfront, then execute with disciplined planning and transparent progress. Best for projects where clarity and ownership matter."
     },
     "model3": {
       "title": "Man-Day Engagement",
-      "desc": "Short, focused allocations for well-defined tasks or support needs."
+      "desc": "Short, focused allocations for well-defined tasks or support needs. We plug into your workflow, resolve targeted items quickly, and leave behind clean handover notes. A practical option for bursts of work without long onboarding."
     }
   },
   "products": {

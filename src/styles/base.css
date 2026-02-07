@@ -212,6 +212,103 @@ p { margin: 0 0 var(--space-2) 0; }
   }
 }
 
+.delivery-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.delivery-visual {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  min-height: 100%;
+}
+
+.delivery-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.delivery-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: 100%;
+  justify-content: space-between;
+}
+
+.delivery-item {
+  padding: var(--space-3);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  background: #fff;
+  transition: transform 220ms ease-out, box-shadow 220ms ease-out;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-left: calc(var(--space-3) + 10px);
+}
+
+
+.delivery-item h3 {
+  margin: 0 0 0.6rem 0;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.delivery-item p {
+  margin: 0 0 0.4rem 0;
+  color: rgba(15, 23, 42, 0.8);
+  line-height: 1.5;
+}
+
+.delivery-item p:last-child {
+  margin-bottom: 0;
+}
+
+.delivery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.delivery-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  border-radius: 8px 0 0 8px;
+  background: var(--delivery-accent, rgba(0, 128, 128, 0.8));
+}
+
+.delivery-item:nth-child(1) { --delivery-accent: rgba(0, 128, 128, 0.85); }
+.delivery-item:nth-child(2) { --delivery-accent: rgba(30, 97, 168, 0.85); }
+.delivery-item:nth-child(3) { --delivery-accent: rgba(120, 70, 170, 0.85); }
+
+@media (max-width: 900px) {
+  .delivery-layout {
+    grid-template-columns: 1fr;
+  }
+  .delivery-items {
+    height: auto;
+  }
+  .delivery-item {
+    flex: none;
+  }
+  .delivery-item::before {
+    width: 6px;
+  }
+}
+
 .button {
   display: inline-block;
   border: 1px solid rgba(255, 255, 255, 0.5);
