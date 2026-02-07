@@ -1,14 +1,14 @@
 export default function hero() {
   return `
     <section id="hero" class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" aria-hidden="true">
+      <div class="hero-media" aria-hidden="true" data-hero-media>
         <video
-          class="hero-video hero-video-1"
+          class="hero-video hero-video-1 is-active"
           autoplay
           muted
-          loop
           playsinline
           preload="auto"
+          data-hero-video="a"
         >
           <source src="/media/hero-01-bridge.mp4" type="video/mp4" />
         </video>
@@ -16,9 +16,9 @@ export default function hero() {
           class="hero-video hero-video-2"
           autoplay
           muted
-          loop
           playsinline
           preload="metadata"
+          data-hero-video="b"
         >
           <source src="/media/hero-02-forest-road.mp4" type="video/mp4" />
         </video>

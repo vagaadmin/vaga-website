@@ -74,3 +74,92 @@ if (contactForm) wireMailtoForm(contactForm, CONTACT_EMAIL, "Contact");
 
 const careersForm = document.querySelector("[data-form=\"careers\"]");
 if (careersForm) wireMailtoForm(careersForm, CAREERS_EMAIL, "Careers");
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const heroA = document.querySelector("[data-hero-video=\"a\"]");
+const heroB = document.querySelector("[data-hero-video=\"b\"]");
+
+function safePlay(video) {
+  if (!video) return;
+  const res = video.play();
+  if (res && typeof res.catch === "function") {
+    res.catch(() => {});
+  }
+}
+
+function setActiveVideo(next, current) {
+  if (current) current.classList.remove("is-active");
+  if (next) next.classList.add("is-active");
+}
+
+let activeVideo = heroA;
+let nextVideo = heroB;
+let switchTimeout = null;
+let switching = false;
+
+function scheduleSwitch(video) {
+  if (!video) return;
+  if (switchTimeout) clearTimeout(switchTimeout);
+  const durationMs = video.duration ? video.duration * 1000 : 9000;
+  const leadTime = 1400;
+  const wait = Math.max(1000, durationMs - leadTime);
+  switchTimeout = window.setTimeout(() => {
+    switchVideos();
+  }, wait);
+}
+
+function switchVideos() {
+  if (!activeVideo || !nextVideo || switching) return;
+  switching = true;
+
+  nextVideo.currentTime = 0;
+  safePlay(nextVideo);
+  setActiveVideo(nextVideo, activeVideo);
+
+  const previous = activeVideo;
+  activeVideo = nextVideo;
+  nextVideo = previous;
+
+  window.setTimeout(() => {
+    if (previous) previous.pause();
+    switching = false;
+    scheduleSwitch(activeVideo);
+  }, 1500);
+}
+
+function initHeroVideoLoop() {
+  if (!heroA || !heroB || prefersReducedMotion) return;
+  heroA.loop = false;
+  heroB.loop = false;
+
+  activeVideo = heroA;
+  nextVideo = heroB;
+
+  heroA.currentTime = 0;
+  safePlay(heroA);
+
+  if (heroB.readyState < 1) {
+    heroB.load();
+  }
+
+  const onLoaded = () => scheduleSwitch(heroA);
+  if (heroA.readyState >= 1) {
+    onLoaded();
+  } else {
+    heroA.addEventListener("loadedmetadata", onLoaded, { once: true });
+  }
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (!heroA || !heroB || prefersReducedMotion) return;
+  if (document.hidden) {
+    heroA.pause();
+    heroB.pause();
+    if (switchTimeout) clearTimeout(switchTimeout);
+  } else {
+    safePlay(activeVideo);
+    scheduleSwitch(activeVideo);
+  }
+});
+
+initHeroVideoLoop();

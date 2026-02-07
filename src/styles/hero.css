@@ -23,14 +23,7 @@
   transition: opacity 1.5s ease-in-out;
 }
 
-.hero-video-1 {
-  opacity: 1;
-  animation: heroFadeA 16s infinite;
-}
-
-.hero-video-2 {
-  animation: heroFadeB 16s infinite;
-}
+.hero-video.is-active { opacity: 1; }
 
 .hero-overlay {
   position: absolute;
@@ -41,8 +34,21 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: var(--space-5) 0;
+  padding: clamp(3rem, 6vw, 5rem) 0;
   color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.15;
+  max-width: 16ch;
+  margin-bottom: var(--space-3);
+}
+
+.hero-content p {
+  max-width: 48ch;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-ctas {
@@ -51,26 +57,9 @@
   flex-wrap: wrap;
 }
 
-@keyframes heroFadeA {
-  0% { opacity: 1; }
-  40% { opacity: 1; }
-  50% { opacity: 0; }
-  90% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes heroFadeB {
-  0% { opacity: 0; }
-  40% { opacity: 0; }
-  50% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .hero-video-1,
   .hero-video-2 {
-    animation: none;
     transition: none;
   }
 
