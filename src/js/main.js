@@ -59,7 +59,7 @@ function wireMailtoForm(form, recipient, label) {
     ];
     if (cv) bodyLines.push(`CV: ${cv}`);
 
-    const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join(\"\\n\"))}`;
+    const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
     window.location.href = mailto;
 
     form.reset();
