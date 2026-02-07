@@ -50,12 +50,14 @@ function applyHeroTitleLines() {
   while (lines.length < lineCount) lines.push("");
 
   titleEl.innerHTML = "";
-  const delays = [0, 80, 160];
+  const delays = [0, 140, 280];
   lines.slice(0, lineCount).forEach((line, idx) => {
     const span = document.createElement("span");
     span.className = "reveal-line";
     span.setAttribute("data-reveal", "line");
     span.style.setProperty("--delay", `${delays[idx] || 0}ms`);
+    const steps = Math.min(26, Math.max(12, Math.round(line.length / 2)));
+    span.style.setProperty("--steps", steps);
     span.textContent = line;
     titleEl.appendChild(span);
   });
@@ -109,6 +111,7 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 const heroA = document.querySelector("[data-hero-video=\"a\"]");
 const heroB = document.querySelector("[data-hero-video=\"b\"]");
 const heroSection = document.querySelector(".hero");
+const header = document.querySelector("header");
 
 function safePlay(video) {
   if (!video) return;
@@ -127,16 +130,24 @@ let activeVideo = heroA;
 let nextVideo = heroB;
 let switchTimeout = null;
 let switching = false;
+let onTimeUpdate = null;
 
 function scheduleSwitch(video) {
   if (!video) return;
   if (switchTimeout) clearTimeout(switchTimeout);
-  const durationMs = video.duration ? video.duration * 1000 : 9000;
-  const leadTime = 1400;
-  const wait = Math.max(1000, durationMs - leadTime);
-  switchTimeout = window.setTimeout(() => {
-    switchVideos();
-  }, wait);
+  if (onTimeUpdate) video.removeEventListener("timeupdate", onTimeUpdate);
+
+  const fadeDuration = 1500;
+  const safetyMargin = 200;
+  onTimeUpdate = () => {
+    if (!video.duration || switching) return;
+    const remainingMs = (video.duration - video.currentTime) * 1000;
+    if (remainingMs <= fadeDuration + safetyMargin) {
+      video.removeEventListener("timeupdate", onTimeUpdate);
+      switchVideos();
+    }
+  };
+  video.addEventListener("timeupdate", onTimeUpdate);
 }
 
 function switchVideos() {
@@ -200,3 +211,15 @@ if (heroSection && !prefersReducedMotion) {
     heroSection.classList.add("hero--ready");
   });
 }
+
+function updateHeaderState() {
+  if (!header) return;
+  if (window.scrollY > 4) {
+    header.classList.add("header--scrolled");
+  } else {
+    header.classList.remove("header--scrolled");
+  }
+}
+
+updateHeaderState();
+window.addEventListener("scroll", updateHeaderState, { passive: true });

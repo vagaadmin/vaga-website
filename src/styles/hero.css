@@ -41,14 +41,14 @@
 .hero-content h1 {
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   line-height: 1.15;
-  max-width: 16ch;
+  max-width: 18ch;
   margin-bottom: var(--space-3);
 }
 
 .hero-content p {
   max-width: 48ch;
   font-size: clamp(1rem, 1.6vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .reveal-title,
@@ -65,11 +65,7 @@
 
 .hero--ready .reveal-line,
 .hero--ready .reveal-item {
-  opacity: 0;
-  transform: translateY(6px);
-  animation: heroReveal 520ms ease-out forwards;
-  animation-delay: var(--delay, 0ms);
-  will-change: opacity, transform;
+  will-change: opacity, transform, clip-path;
 }
 
 .hero-ctas {
@@ -78,7 +74,24 @@
   flex-wrap: wrap;
 }
 
-@keyframes heroReveal {
+.hero--ready .reveal-line {
+  clip-path: inset(0 100% 0 0);
+  animation: heroType 300ms steps(var(--steps, 18), end) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+.hero--ready .reveal-item {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: heroFadeUp 420ms ease-out forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes heroType {
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes heroFadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
@@ -100,5 +113,6 @@
     animation: none;
     opacity: 1;
     transform: none;
+    clip-path: none;
   }
 }
