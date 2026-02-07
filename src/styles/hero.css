@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   padding: 0;
+  padding-top: var(--header-h);
   min-height: 70vh;
   display: flex;
   align-items: stretch;
