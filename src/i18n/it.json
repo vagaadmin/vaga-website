@@ -1,0 +1,88 @@
+{
+  "brand": "VAGA Technology Inc.",
+  "nav": {
+    "hero": "Hero",
+    "what": "What We Do",
+    "how": "How We Work",
+    "products": "Products",
+    "trust": "Trust & Scale",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Reliable software delivery for complex business needs.",
+    "subtitle": "VAGA Technology Inc. is a long-term technology partner that builds and maintains critical systems with clarity and care.",
+    "cta_contact": "Contact",
+    "cta_careers": "Careers"
+  },
+  "what": {
+    "title": "What We Do",
+    "cap1": {
+      "title": "Business Software Platforms",
+      "desc": "We design and deliver stable platforms that support core operations."
+    },
+    "cap2": {
+      "title": "System Integration",
+      "desc": "We connect existing systems to reduce friction and improve flow."
+    },
+    "cap3": {
+      "title": "Operational Automation",
+      "desc": "We streamline repeatable processes to improve reliability and speed."
+    }
+  },
+  "how": {
+    "title": "How We Work",
+    "model1": {
+      "title": "Flexible Development (T&M)",
+      "desc": "Adaptive teams that scale with priorities and collaborate closely with your stakeholders."
+    },
+    "model2": {
+      "title": "Turnkey Projects",
+      "desc": "Clear scope delivery with defined outcomes, managed end-to-end by VAGA."
+    },
+    "model3": {
+      "title": "Man-Day Engagement",
+      "desc": "Short, focused allocations for well-defined tasks or support needs."
+    }
+  },
+  "products": {
+    "title": "Products We Built",
+    "yawa": {
+      "name": "Yawa",
+      "desc": "A focused product designed to support core business workflows with clarity."
+    }
+  },
+  "trust": {
+    "title": "Trust & Scale",
+    "countries": {
+      "label": "Countries of operation:",
+      "list": "Turkey · Italy · United States · Malta"
+    },
+    "statement1": "Long-term partnerships built on consistent delivery.",
+    "statement2": "Calm, dependable execution across complex environments.",
+    "statement3": "Clear communication and accountable collaboration."
+  },
+  "careers": {
+    "title": "Careers",
+    "intro": "We work with professionals who value clarity, responsibility, and steady progress.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "cv": "Optional CV link (URL)",
+      "submit": "Send Application"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "email_label": "Email:",
+    "email": "contact@vaga.tech",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  },
+  "footer": "VAGA Technology Inc."
+}
