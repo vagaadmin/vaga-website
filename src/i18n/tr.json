@@ -16,16 +16,17 @@
   },
   "what": {
     "title": "Yetkinlikler",
+    "lead": "Karmaşık ihtiyaçları güvenilir sistemlere dönüştürüyoruz.",
     "cap1": {
-      "title": "Business Software Platforms",
+      "title": "İş yazılım platformları",
       "desc": "We design and deliver stable platforms that support core operations."
     },
     "cap2": {
-      "title": "System Integration",
+      "title": "Sistem entegrasyonu",
       "desc": "We connect existing systems to reduce friction and improve flow."
     },
     "cap3": {
-      "title": "Operational Automation",
+      "title": "Operasyonel otomasyon",
       "desc": "We streamline repeatable processes to improve reliability and speed."
     }
   },

@@ -16,16 +16,17 @@
   },
   "what": {
     "title": "Competenze",
+    "lead": "Trasformiamo requisiti complessi in sistemi affidabili.",
     "cap1": {
-      "title": "Business Software Platforms",
+      "title": "Piattaforme software aziendali",
       "desc": "We design and deliver stable platforms that support core operations."
     },
     "cap2": {
-      "title": "System Integration",
+      "title": "Integrazione di sistema",
       "desc": "We connect existing systems to reduce friction and improve flow."
     },
     "cap3": {
-      "title": "Operational Automation",
+      "title": "Automazione operativa",
       "desc": "We streamline repeatable processes to improve reliability and speed."
     }
   },

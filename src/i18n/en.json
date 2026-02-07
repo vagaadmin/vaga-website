@@ -16,16 +16,17 @@
   },
   "what": {
     "title": "Capabilities",
+    "lead": "We turn complex requirements into reliable systems.",
     "cap1": {
-      "title": "Business Software Platforms",
+      "title": "Business software platforms",
       "desc": "We design and deliver stable platforms that support core operations."
     },
     "cap2": {
-      "title": "System Integration",
+      "title": "System integration",
       "desc": "We connect existing systems to reduce friction and improve flow."
     },
     "cap3": {
-      "title": "Operational Automation",
+      "title": "Operational automation",
       "desc": "We streamline repeatable processes to improve reliability and speed."
     }
   },
