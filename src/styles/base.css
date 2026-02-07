@@ -132,6 +132,7 @@ p { margin: 0 0 var(--space-2) 0; }
   cursor: pointer;
   border-radius: 999px;
   font-size: 0.95rem;
+  transition: background-color 220ms ease-out, border-color 220ms ease-out, color 220ms ease-out, box-shadow 220ms ease-out, transform 220ms ease-out;
 }
 
 .button:hover {
@@ -148,6 +149,23 @@ p { margin: 0 0 var(--space-2) 0; }
   background: transparent;
   color: #fff;
   border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero .button:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.18);
+}
+
+.hero .button + .button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
 }
 
 @media (max-width: 860px) {
