@@ -14,3 +14,9 @@ input, textarea {
 }
 
 textarea { min-height: 120px; }
+
+.form-hint {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}

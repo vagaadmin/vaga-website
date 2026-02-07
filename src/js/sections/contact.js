@@ -5,7 +5,7 @@ export default function contact() {
         <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
         <p data-i18n="contact.email_label">Email:</p>
         <p><a data-contact-email href="mailto:contact@vaga.tech">contact@vaga.tech</a></p>
-        <form action="#" method="post">
+        <form action="#" method="post" data-form="contact">
           <div class="form-grid">
             <div>
               <label for="contact-name" data-i18n="contact.form.name">Name</label>
@@ -22,6 +22,7 @@ export default function contact() {
             <div>
               <button class="button" type="submit" data-i18n="contact.form.submit">Send Message</button>
             </div>
+            <p class="form-hint" data-form-status aria-live="polite"></p>
           </div>
         </form>
       </div>

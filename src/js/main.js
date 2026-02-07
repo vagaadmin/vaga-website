@@ -1,5 +1,6 @@
+import "../styles/hero.css";
 import { applyTranslations, detectLanguage } from "./i18n.js";
-import { CONTACT_EMAIL } from "./config.js";
+import { CONTACT_EMAIL, CAREERS_EMAIL } from "./config.js";
 
 import hero from "./sections/hero.js";
 import whatWeDo from "./sections/whatWeDo.js";
@@ -39,3 +40,37 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
     applyTranslations(lang);
   });
 });
+
+function wireMailtoForm(form, recipient, label) {
+  const statusEl = form.querySelector("[data-form-status]");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = form.querySelector("[name=\"name\"]")?.value?.trim() || "";
+    const email = form.querySelector("[name=\"email\"]")?.value?.trim() || "";
+    const message = form.querySelector("[name=\"message\"]")?.value?.trim() || "";
+    const cv = form.querySelector("[name=\"cv\"]")?.value?.trim() || "";
+
+    const subject = `${label} — ${name || "No name"}`;
+    const bodyLines = [
+      `Name: ${name || "-"}`,
+      `Email: ${email || "-"}`,
+      `Message: ${message || "-"}`,
+    ];
+    if (cv) bodyLines.push(`CV: ${cv}`);
+
+    const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join(\"\\n\"))}`;
+    window.location.href = mailto;
+
+    form.reset();
+    if (statusEl) {
+      statusEl.textContent = "Thanks. Your email client should open shortly.";
+    }
+  });
+}
+
+const contactForm = document.querySelector("[data-form=\"contact\"]");
+if (contactForm) wireMailtoForm(contactForm, CONTACT_EMAIL, "Contact");
+
+const careersForm = document.querySelector("[data-form=\"careers\"]");
+if (careersForm) wireMailtoForm(careersForm, CAREERS_EMAIL, "Careers");

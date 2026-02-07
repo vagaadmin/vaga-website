@@ -4,7 +4,7 @@ export default function careers() {
       <div class="container">
         <h2 id="careers-title" data-i18n="careers.title">Careers</h2>
         <p data-i18n="careers.intro">We work with professionals who value clarity, responsibility, and steady progress.</p>
-        <form action="#" method="post">
+        <form action="#" method="post" data-form="careers">
           <div class="form-grid">
             <div>
               <label for="career-name" data-i18n="careers.form.name">Name</label>
@@ -25,6 +25,7 @@ export default function careers() {
             <div>
               <button class="button" type="submit" data-i18n="careers.form.submit">Send Application</button>
             </div>
+            <p class="form-hint" data-form-status aria-live="polite"></p>
           </div>
         </form>
       </div>
