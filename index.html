@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VAGA Technology Inc.</title>
+  <style>
+    :root {
+      --content-width: 960px;
+      --space-1: 0.5rem;
+      --space-2: 1rem;
+      --space-3: 1.5rem;
+      --space-4: 2rem;
+      --space-5: 3rem;
+      --line-height: 1.6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: var(--line-height);
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus, button:focus, input:focus, textarea:focus, select:focus { outline: 2px solid currentColor; outline-offset: 2px; }
+
+    header {
+      border-bottom: 1px solid #ddd;
+    }
+    .container {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 var(--space-3);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      padding: var(--space-2) 0;
+    }
+    nav a {
+      margin-right: var(--space-2);
+    }
+    nav a:last-child { margin-right: 0; }
+
+    .lang-switch {
+      display: flex;
+      gap: var(--space-1);
+      align-items: center;
+    }
+    .lang-switch button {
+      border: 1px solid #ccc;
+      background: transparent;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+    }
+    main section {
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid #eee;
+    }
+    h1, h2, h3 { margin: 0 0 var(--space-2) 0; }
+    p { margin: 0 0 var(--space-2) 0; }
+    .grid-3 {
+      display: grid;
+      gap: var(--space-3);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: var(--space-3);
+    }
+    .form-grid {
+      display: grid;
+      gap: var(--space-2);
+      grid-template-columns: 1fr;
+    }
+    label { display: block; margin-bottom: 0.25rem; }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      font: inherit;
+    }
+    textarea { min-height: 120px; }
+    .button {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 0.5rem 0.75rem;
+      background: transparent;
+      cursor: pointer;
+    }
+    footer {
+      padding: var(--space-3) 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <strong data-i18n="brand">VAGA Technology Inc.</strong>
+      <nav aria-label="Primary">
+        <a href="#hero" data-i18n="nav.hero">Hero</a>
+        <a href="#what-we-do" data-i18n="nav.what">What We Do</a>
+        <a href="#how-we-work" data-i18n="nav.how">How We Work</a>
+        <a href="#products" data-i18n="nav.products">Products</a>
+        <a href="#trust" data-i18n="nav.trust">Trust &amp; Scale</a>
+        <a href="#careers" data-i18n="nav.careers">Careers</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-switch" aria-label="Language switch">
+        <button type="button" data-lang="en">EN</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-lang="tr">TR</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-lang="it">IT</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title" data-i18n="hero.title">Reliable software delivery for complex business needs.</h1>
+        <p data-i18n="hero.subtitle">VAGA Technology Inc. is a long-term technology partner that builds and maintains critical systems with clarity and care.</p>
+        <div>
+          <a class="button" href="#contact" data-i18n="hero.cta_contact">Contact</a>
+          <a class="button" href="#careers" data-i18n="hero.cta_careers">Careers</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-we-do" aria-labelledby="what-title">
+      <div class="container">
+        <h2 id="what-title" data-i18n="what.title">What We Do</h2>
+        <div class="grid-3">
+          <div>
+            <h3 data-i18n="what.cap1.title">Business Software Platforms</h3>
+            <p data-i18n="what.cap1.desc">We design and deliver stable platforms that support core operations.</p>
+          </div>
+          <div>
+            <h3 data-i18n="what.cap2.title">System Integration</h3>
+            <p data-i18n="what.cap2.desc">We connect existing systems to reduce friction and improve flow.</p>
+          </div>
+          <div>
+            <h3 data-i18n="what.cap3.title">Operational Automation</h3>
+            <p data-i18n="what.cap3.desc">We streamline repeatable processes to improve reliability and speed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-we-work" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title" data-i18n="how.title">How We Work</h2>
+        <div class="grid-3">
+          <div>
+            <h3 data-i18n="how.model1.title">Flexible Development (T&amp;M)</h3>
+            <p data-i18n="how.model1.desc">Adaptive teams that scale with priorities and collaborate closely with your stakeholders.</p>
+          </div>
+          <div>
+            <h3 data-i18n="how.model2.title">Turnkey Projects</h3>
+            <p data-i18n="how.model2.desc">Clear scope delivery with defined outcomes, managed end-to-end by VAGA.</p>
+          </div>
+          <div>
+            <h3 data-i18n="how.model3.title">Man-Day Engagement</h3>
+            <p data-i18n="how.model3.desc">Short, focused allocations for well-defined tasks or support needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title" data-i18n="products.title">Products We Built</h2>
+        <div class="card">
+          <h3 data-i18n="products.yawa.name">Yawa</h3>
+          <p data-i18n="products.yawa.desc">A focused product designed to support core business workflows with clarity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trust" aria-labelledby="trust-title">
+      <div class="container">
+        <h2 id="trust-title" data-i18n="trust.title">Trust &amp; Scale</h2>
+        <div>
+          <p data-i18n="trust.countries.label">Countries of operation:</p>
+          <p data-i18n="trust.countries.list">Turkey · Italy · United States · Malta</p>
+        </div>
+        <div>
+          <p data-i18n="trust.statement1">Long-term partnerships built on consistent delivery.</p>
+          <p data-i18n="trust.statement2">Calm, dependable execution across complex environments.</p>
+          <p data-i18n="trust.statement3">Clear communication and accountable collaboration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers" aria-labelledby="careers-title">
+      <div class="container">
+        <h2 id="careers-title" data-i18n="careers.title">Careers</h2>
+        <p data-i18n="careers.intro">We work with professionals who value clarity, responsibility, and steady progress.</p>
+        <form action="#" method="post">
+          <div class="form-grid">
+            <div>
+              <label for="career-name" data-i18n="careers.form.name">Name</label>
+              <input id="career-name" name="name" type="text" required />
+            </div>
+            <div>
+              <label for="career-email" data-i18n="careers.form.email">Email</label>
+              <input id="career-email" name="email" type="email" required />
+            </div>
+            <div>
+              <label for="career-message" data-i18n="careers.form.message">Message</label>
+              <textarea id="career-message" name="message" required></textarea>
+            </div>
+            <div>
+              <label for="career-cv" data-i18n="careers.form.cv">Optional CV link (URL)</label>
+              <input id="career-cv" name="cv" type="url" />
+            </div>
+            <div>
+              <button class="button" type="submit" data-i18n="careers.form.submit">Send Application</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+        <p data-i18n="contact.email_label">Email:</p>
+        <p><a href="mailto:contact@vaga.tech" data-i18n="contact.email">contact@vaga.tech</a></p>
+        <form action="#" method="post">
+          <div class="form-grid">
+            <div>
+              <label for="contact-name" data-i18n="contact.form.name">Name</label>
+              <input id="contact-name" name="name" type="text" required />
+            </div>
+            <div>
+              <label for="contact-email" data-i18n="contact.form.email">Email</label>
+              <input id="contact-email" name="email" type="email" required />
+            </div>
+            <div>
+              <label for="contact-message" data-i18n="contact.form.message">Message</label>
+              <textarea id="contact-message" name="message" required></textarea>
+            </div>
+            <div>
+              <button class="button" type="submit" data-i18n="contact.form.submit">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small data-i18n="footer">VAGA Technology Inc.</small>
+    </div>
+  </footer>
+
+  <script>
+    const i18n = {
+      en: {
+        brand: "VAGA Technology Inc.",
+        nav: {
+          hero: "Hero",
+          what: "What We Do",
+          how: "How We Work",
+          products: "Products",
+          trust: "Trust & Scale",
+          careers: "Careers",
+          contact: "Contact"
+        },
+        hero: {
+          title: "Reliable software delivery for complex business needs.",
+          subtitle: "VAGA Technology Inc. is a long-term technology partner that builds and maintains critical systems with clarity and care.",
+          cta_contact: "Contact",
+          cta_careers: "Careers"
+        },
+        what: {
+          title: "What We Do",
+          cap1: { title: "Business Software Platforms", desc: "We design and deliver stable platforms that support core operations." },
+          cap2: { title: "System Integration", desc: "We connect existing systems to reduce friction and improve flow." },
+          cap3: { title: "Operational Automation", desc: "We streamline repeatable processes to improve reliability and speed." }
+        },
+        how: {
+          title: "How We Work",
+          model1: { title: "Flexible Development (T&M)", desc: "Adaptive teams that scale with priorities and collaborate closely with your stakeholders." },
+          model2: { title: "Turnkey Projects", desc: "Clear scope delivery with defined outcomes, managed end-to-end by VAGA." },
+          model3: { title: "Man-Day Engagement", desc: "Short, focused allocations for well-defined tasks or support needs." }
+        },
+        products: {
+          title: "Products We Built",
+          yawa: { name: "Yawa", desc: "A focused product designed to support core business workflows with clarity." }
+        },
+        trust: {
+          title: "Trust & Scale",
+          countries: { label: "Countries of operation:", list: "Turkey · Italy · United States · Malta" },
+          statement1: "Long-term partnerships built on consistent delivery.",
+          statement2: "Calm, dependable execution across complex environments.",
+          statement3: "Clear communication and accountable collaboration."
+        },
+        careers: {
+          title: "Careers",
+          intro: "We work with professionals who value clarity, responsibility, and steady progress.",
+          form: {
+            name: "Name",
+            email: "Email",
+            message: "Message",
+            cv: "Optional CV link (URL)",
+            submit: "Send Application"
+          }
+        },
+        contact: {
+          title: "Contact",
+          email_label: "Email:",
+          email: "contact@vaga.tech",
+          form: {
+            name: "Name",
+            email: "Email",
+            message: "Message",
+            submit: "Send Message"
+          }
+        },
+        footer: "VAGA Technology Inc."
+      },
+      tr: {},
+      it: {}
+    };
+
+    i18n.tr = JSON.parse(JSON.stringify(i18n.en));
+    i18n.it = JSON.parse(JSON.stringify(i18n.en));
+
+    function getByPath(obj, path) {
+      return path.split('.').reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : null), obj);
+    }
+
+    function applyTranslations(lang) {
+      const dict = i18n[lang] || i18n.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        const value = getByPath(dict, key);
+        if (value !== null) {
+          el.textContent = value;
+        }
+      });
+    }
+
+    function detectLanguage() {
+      const lang = (navigator.language || 'en').toLowerCase();
+      if (lang.startsWith('tr')) return 'tr';
+      if (lang.startsWith('it')) return 'it';
+      return 'en';
+    }
+
+    const initialLang = detectLanguage();
+    applyTranslations(initialLang);
+
+    document.querySelectorAll('[data-lang]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        applyTranslations(lang);
+      });
+    });
+  </script>
+</body>
+</html>
