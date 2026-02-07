@@ -1,7 +1,7 @@
 export default function howWeWork() {
   return `
     <section id="how-we-work" aria-labelledby="how-title">
-      <div class="container">
+      <div class="content">
         <h2 id="how-title" data-i18n="how.title">How We Work</h2>
         <div class="grid-3">
           <div>

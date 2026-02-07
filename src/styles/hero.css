@@ -36,26 +36,33 @@
   position: relative;
   z-index: 1;
   padding: clamp(3rem, 6vw, 5rem) 0;
+  padding-inline: 0;
   color: #fff;
 }
 
 .hero-content h1 {
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   line-height: 1.15;
-  max-width: 18ch;
+  max-width: 26ch;
   margin-bottom: var(--space-3);
 }
 
-.hero-content p {
-  max-width: 48ch;
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
+.hero-subtitle {
+  opacity: 1;
+  transform: none;
+  font-size: clamp(1.125rem, 1.02rem + 0.5vw, 1.25rem);
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.95);
+}
+
+@media (min-width: 1024px) {
+  .hero-subtitle { max-width: 52ch; }
 }
 
 .reveal-title,
 .reveal-line,
 .reveal-item {
-  display: inline-block;
+  display: block;
   opacity: 1;
   transform: translateY(0);
 }
@@ -73,31 +80,48 @@
   display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
+  opacity: 1;
+  transform: none;
+}
+
+.hero--ready .hero-ctas {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.hero--ready .hero-ctas.is-in {
+  animation: cta-in 900ms ease-out both;
+  animation-delay: 420ms;
+}
+
+@keyframes cta-in {
+  0%   { opacity: 0; transform: translateY(14px); }
+  70%  { opacity: 1; transform: translateY(-3px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .hero--ready .reveal-line {
   clip-path: inset(0 100% 0 0);
-  animation: heroType 300ms steps(var(--steps, 18), end) forwards;
+  animation: heroType 420ms steps(var(--steps, 18), end) forwards;
   animation-delay: var(--delay, 0ms);
 }
 
-.hero--ready .reveal-item {
-  opacity: 0;
+.hero--ready .hero-subtitle {
+  opacity: 0.25;
   transform: translateY(8px);
-  animation: heroFadeUp 420ms ease-out forwards;
-  animation-delay: var(--delay, 0ms);
+}
+
+.hero--ready .hero-subtitle.is-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+  transition-delay: 220ms;
 }
 
 @keyframes heroType {
   to { clip-path: inset(0 0 0 0); }
 }
 
-@keyframes heroFadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .hero-video-1,
@@ -110,10 +134,15 @@
   }
 
   .hero--ready .reveal-line,
-  .hero--ready .reveal-item {
+  .hero--ready .reveal-item,
+  .hero--ready .hero-subtitle,
+  .hero--ready .hero-subtitle.is-in,
+  .hero--ready .hero-ctas,
+  .hero--ready .hero-ctas.is-in {
     animation: none;
-    opacity: 1;
+    opacity: 1 !important;
     transform: none;
     clip-path: none;
+    transition: none !important;
   }
 }

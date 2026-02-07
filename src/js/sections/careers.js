@@ -1,7 +1,7 @@
 export default function careers() {
   return `
     <section id="careers" aria-labelledby="careers-title">
-      <div class="container">
+      <div class="content">
         <h2 id="careers-title" data-i18n="careers.title">Careers</h2>
         <p data-i18n="careers.intro">We work with professionals who value clarity, responsibility, and steady progress.</p>
         <form action="#" method="post" data-form="careers">

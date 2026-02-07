@@ -24,9 +24,9 @@ export default function hero() {
         </video>
         <div class="hero-overlay"></div>
       </div>
-      <div class="container hero-content">
+      <div class="content hero-content">
         <h1 id="hero-title" class="reveal-title" data-reveal="lines" data-i18n="hero.title">Reliable software delivery for complex business needs.</h1>
-        <p class="reveal-item" data-reveal="item" style="--delay: 520ms;" data-i18n="hero.subtitle">VAGA Technology Inc. is a long-term technology partner that builds and maintains critical systems with clarity and care.</p>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">VAGA Technology Inc. is a long-term technology partner that builds and maintains critical systems with clarity and care.</p>
         <div class="hero-ctas reveal-item" data-reveal="item" style="--delay: 660ms;">
           <a class="button" href="#contact" data-i18n="hero.cta_contact">Contact</a>
           <a class="button" href="#careers" data-i18n="hero.cta_careers">Careers</a>

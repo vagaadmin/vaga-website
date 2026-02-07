@@ -1,5 +1,5 @@
 {
-  "brand": "VAGA Technology Inc.",
+  "brand": "VAGA",
   "nav": {
     "what": "What We Do",
     "how": "How We Work",
@@ -9,8 +9,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Reliable software delivery for complex business needs.",
-    "subtitle": "VAGA Technology Inc. is a long-term technology partner that builds and maintains critical systems with clarity and care.",
+    "title": "Reliable software delivery for long-term business needs.",
+    "subtitle": "A trusted technology partner, building and maintaining critical systems with clarity and care.",
     "cta_contact": "Contact",
     "cta_careers": "Careers"
   },

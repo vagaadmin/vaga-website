@@ -41,7 +41,7 @@ function applyHeroTitleLines() {
   if (!text) return;
 
   const words = text.split(/\s+/);
-  const lineCount = 3;
+  const lineCount = 2;
   const perLine = Math.ceil(words.length / lineCount);
   const lines = [];
   for (let i = 0; i < words.length; i += perLine) {
@@ -50,7 +50,7 @@ function applyHeroTitleLines() {
   while (lines.length < lineCount) lines.push("");
 
   titleEl.innerHTML = "";
-  const delays = [0, 140, 280];
+  const delays = [0, 180];
   lines.slice(0, lineCount).forEach((line, idx) => {
     const span = document.createElement("span");
     span.className = "reveal-line";
@@ -70,6 +70,8 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
     const lang = btn.getAttribute("data-lang");
     applyTranslations(lang);
     applyHeroTitleLines();
+    replaySubtitleReveal();
+    replayCtaReveal();
   });
 });
 
@@ -209,6 +211,40 @@ initHeroVideoLoop();
 if (heroSection && !prefersReducedMotion) {
   requestAnimationFrame(() => {
     heroSection.classList.add("hero--ready");
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const subtitle = heroSection.querySelector(".hero-subtitle");
+        if (subtitle) subtitle.classList.add("is-in");
+        const ctas = heroSection.querySelector(".hero-ctas");
+        if (ctas) ctas.classList.add("is-in");
+      });
+    });
+  });
+}
+
+function replaySubtitleReveal() {
+  if (prefersReducedMotion || !heroSection) return;
+  const subtitle = heroSection.querySelector(".hero-subtitle");
+  if (!subtitle) return;
+  subtitle.classList.remove("is-in");
+  void subtitle.offsetHeight;
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      subtitle.classList.add("is-in");
+    });
+  });
+}
+
+function replayCtaReveal() {
+  if (prefersReducedMotion || !heroSection) return;
+  const ctas = heroSection.querySelector(".hero-ctas");
+  if (!ctas) return;
+  ctas.classList.remove("is-in");
+  void ctas.offsetHeight;
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      ctas.classList.add("is-in");
+    });
   });
 }
 

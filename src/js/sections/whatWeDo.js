@@ -1,7 +1,7 @@
 export default function whatWeDo() {
   return `
     <section id="what-we-do" aria-labelledby="what-title">
-      <div class="container">
+      <div class="content">
         <h2 id="what-title" data-i18n="what.title">What We Do</h2>
         <div class="grid-3">
           <div>

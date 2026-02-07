@@ -1,7 +1,7 @@
 export default function contact() {
   return `
     <section id="contact" aria-labelledby="contact-title">
-      <div class="container">
+      <div class="content">
         <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
         <p data-i18n="contact.email_label">Email:</p>
         <p><a data-contact-email href="mailto:contact@vaga.tech">contact@vaga.tech</a></p>

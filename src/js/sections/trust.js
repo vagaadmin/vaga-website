@@ -1,7 +1,7 @@
 export default function trust() {
   return `
     <section id="trust" aria-labelledby="trust-title">
-      <div class="container">
+      <div class="content">
         <h2 id="trust-title" data-i18n="trust.title">Trust &amp; Scale</h2>
         <div>
           <p data-i18n="trust.countries.label">Countries of operation:</p>
