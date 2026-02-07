@@ -34,10 +34,40 @@ if (emailEl) {
 const initialLang = detectLanguage();
 applyTranslations(initialLang);
 
+function applyHeroTitleLines() {
+  const titleEl = document.querySelector("[data-reveal=\"lines\"]");
+  if (!titleEl) return;
+  const text = titleEl.textContent.trim();
+  if (!text) return;
+
+  const words = text.split(/\s+/);
+  const lineCount = 3;
+  const perLine = Math.ceil(words.length / lineCount);
+  const lines = [];
+  for (let i = 0; i < words.length; i += perLine) {
+    lines.push(words.slice(i, i + perLine).join(" "));
+  }
+  while (lines.length < lineCount) lines.push("");
+
+  titleEl.innerHTML = "";
+  const delays = [0, 80, 160];
+  lines.slice(0, lineCount).forEach((line, idx) => {
+    const span = document.createElement("span");
+    span.className = "reveal-line";
+    span.setAttribute("data-reveal", "line");
+    span.style.setProperty("--delay", `${delays[idx] || 0}ms`);
+    span.textContent = line;
+    titleEl.appendChild(span);
+  });
+}
+
+applyHeroTitleLines();
+
 document.querySelectorAll("[data-lang]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
     applyTranslations(lang);
+    applyHeroTitleLines();
   });
 });
 
@@ -78,6 +108,7 @@ if (careersForm) wireMailtoForm(careersForm, CAREERS_EMAIL, "Careers");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const heroA = document.querySelector("[data-hero-video=\"a\"]");
 const heroB = document.querySelector("[data-hero-video=\"b\"]");
+const heroSection = document.querySelector(".hero");
 
 function safePlay(video) {
   if (!video) return;
@@ -163,3 +194,9 @@ document.addEventListener("visibilitychange", () => {
 });
 
 initHeroVideoLoop();
+
+if (heroSection && !prefersReducedMotion) {
+  requestAnimationFrame(() => {
+    heroSection.classList.add("hero--ready");
+  });
+}

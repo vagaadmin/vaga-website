@@ -51,10 +51,38 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+.reveal-title,
+.reveal-line,
+.reveal-item {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-line {
+  display: block;
+}
+
+.hero--ready .reveal-line,
+.hero--ready .reveal-item {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: heroReveal 520ms ease-out forwards;
+  animation-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+}
+
 .hero-ctas {
   display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -65,5 +93,12 @@
 
   .hero-video-2 {
     display: none;
+  }
+
+  .hero--ready .reveal-line,
+  .hero--ready .reveal-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
