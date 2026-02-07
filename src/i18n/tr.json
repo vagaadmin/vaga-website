@@ -1,8 +1,8 @@
 {
   "brand": "VAGA",
   "nav": {
-    "what": "What We Do",
-    "how": "How We Work",
+    "what": "Yetkinlikler",
+    "how": "Teslimat Modeli",
     "products": "Products",
     "trust": "Trust & Scale",
     "careers": "Careers",
@@ -15,7 +15,7 @@
     "cta_careers": "Careers"
   },
   "what": {
-    "title": "What We Do",
+    "title": "Yetkinlikler",
     "cap1": {
       "title": "Business Software Platforms",
       "desc": "We design and deliver stable platforms that support core operations."
@@ -30,7 +30,7 @@
     }
   },
   "how": {
-    "title": "How We Work",
+    "title": "Teslimat Modeli",
     "model1": {
       "title": "Flexible Development (T&M)",
       "desc": "Adaptive teams that scale with priorities and collaborate closely with your stakeholders."
