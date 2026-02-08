@@ -3,7 +3,7 @@
   "nav": {
     "what": "Yetkinlikler",
     "how": "Teslimat Modeli",
-    "products": "Products",
+    "products": "E-ticaret",
     "trust": "Trust & Scale",
     "careers": "Careers",
     "contact": "Contact"
@@ -46,10 +46,10 @@
     }
   },
   "products": {
-    "title": "Products We Built",
+    "title": "E-ticaret",
     "yawa": {
-      "name": "Yawa",
-      "desc": "A focused product designed to support core business workflows with clarity."
+      "name": "E-ticaret",
+      "desc": "Stabil platformlar, entegrasyon ve operasyonel güvenilirliğe odaklanan uçtan uca e-ticaret teslimi."
     }
   },
   "trust": {

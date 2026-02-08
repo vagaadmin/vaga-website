@@ -3,7 +3,7 @@
   "nav": {
     "what": "Competenze",
     "how": "Modello di Consegna",
-    "products": "Products",
+    "products": "E-commerce",
     "trust": "Trust & Scale",
     "careers": "Careers",
     "contact": "Contact"
@@ -46,10 +46,10 @@
     }
   },
   "products": {
-    "title": "Products We Built",
+    "title": "E-commerce",
     "yawa": {
-      "name": "Yawa",
-      "desc": "A focused product designed to support core business workflows with clarity."
+      "name": "E-commerce",
+      "desc": "Delivery end-to-end per e-commerce, con focus su piattaforme stabili, integrazione e affidabilità operativa."
     }
   },
   "trust": {
