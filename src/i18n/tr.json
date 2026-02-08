@@ -46,11 +46,9 @@
     }
   },
   "products": {
-    "title": "E-ticaret",
-    "yawa": {
-      "name": "E-ticaret",
-      "desc": "Stabil platformlar, entegrasyon ve operasyonel güvenilirliğe odaklanan uçtan uca e-ticaret teslimi."
-    }
+    "label": "E-ticaret",
+    "title": "Market perakendesi için uçtan uca ticaret altyapısı.",
+    "subline": "Dijital mağaza, sipariş yönetimi, toplama, lojistik ve ERP bağlantılarını uçtan uca yürüten modüler, API‑öncelikli bir platform — kurumsal ölçekte operasyonlar için tasarlandı."
   },
   "trust": {
     "title": "Trust & Scale",

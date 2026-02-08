@@ -46,11 +46,9 @@
     }
   },
   "products": {
-    "title": "E-commerce",
-    "yawa": {
-      "name": "E-commerce",
-      "desc": "Delivery end-to-end per e-commerce, con focus su piattaforme stabili, integrazione e affidabilità operativa."
-    }
+    "label": "E-commerce",
+    "title": "Infrastruttura commerce end‑to‑end per il retail grocery.",
+    "subline": "Una piattaforma modulare e API‑first che gestisce storefront digitale, gestione ordini, picking, logistica e connettività ERP — progettata per operazioni su scala enterprise."
   },
   "trust": {
     "title": "Trust & Scale",

@@ -114,6 +114,8 @@ const heroA = document.querySelector("[data-hero-video=\"a\"]");
 const heroB = document.querySelector("[data-hero-video=\"b\"]");
 const heroSection = document.querySelector(".hero");
 const header = document.querySelector("header");
+const ecomHero = document.querySelector(".products-hero");
+const ecomHeroImg = document.querySelector("[data-ecom-hero-img]");
 
 function safePlay(video) {
   if (!video) return;
@@ -221,6 +223,36 @@ if (heroSection && !prefersReducedMotion) {
     });
   });
 }
+
+function initEcomHeroDrift() {
+  if (!ecomHero || !ecomHeroImg || prefersReducedMotion) return;
+  let ticking = false;
+
+  const update = () => {
+    const rect = ecomHero.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    if (rect.bottom <= 0 || rect.top >= vh) return;
+    const progress = (vh - rect.top) / (vh + rect.height);
+    const clamped = Math.max(0, Math.min(1, progress));
+    const drift = (clamped - 0.5) * 44;
+    ecomHero.style.setProperty("--ecom-drift", `${drift.toFixed(2)}px`);
+  };
+
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      update();
+      ticking = false;
+    });
+  };
+
+  update();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+}
+
+initEcomHeroDrift();
 
 function replaySubtitleReveal() {
   if (prefersReducedMotion || !heroSection) return;
