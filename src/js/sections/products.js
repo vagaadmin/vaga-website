@@ -83,7 +83,7 @@ export default function products() {
               <h3 class="products-domain__title" data-i18n="products.domains.platform.title">Platform Architecture</h3>
               <p class="products-domain__desc" data-i18n="products.domains.platform.desc">Event-driven backend with async workflows and strict domain boundaries.</p>
               <div class="products-domain__logos" aria-label="Platform Architecture technologies">
-                <span class="products-domain__logo">.NET 8</span>
+                <span class="products-domain__logo">.NET</span>
                 <span class="products-domain__logo">EF Core</span>
                 <span class="products-domain__logo">MassTransit</span>
                 <span class="products-domain__logo">RabbitMQ</span>
