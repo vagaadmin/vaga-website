@@ -116,6 +116,8 @@ const heroSection = document.querySelector(".hero");
 const header = document.querySelector("header");
 const ecomHero = document.querySelector(".products-hero");
 const ecomHeroImg = document.querySelector("[data-ecom-hero-img]");
+const techStackRow = document.querySelector(".products-techstack__row");
+const techStackControls = document.querySelectorAll("[data-techstack-scroll]");
 
 function safePlay(video) {
   if (!video) return;
@@ -253,6 +255,88 @@ function initEcomHeroDrift() {
 }
 
 initEcomHeroDrift();
+
+function updateTechStackControls() {
+  if (!techStackRow || techStackControls.length === 0) return;
+  const maxScroll = techStackRow.scrollWidth - techStackRow.clientWidth;
+  if (maxScroll <= 0) {
+    techStackControls.forEach((btn) => {
+      btn.classList.remove("is-available");
+    });
+    return;
+  }
+  const scrollLeft = Math.min(maxScroll, Math.max(0, techStackRow.scrollLeft));
+  const atStart = scrollLeft <= 2;
+  const atEnd = scrollLeft >= maxScroll - 2;
+  techStackControls.forEach((btn) => {
+    const dir = btn.getAttribute("data-techstack-scroll");
+    const shouldShow = dir === "prev" ? !atStart : !atEnd;
+    btn.classList.toggle("is-available", shouldShow);
+  });
+}
+
+function initTechStackControls() {
+  if (!techStackRow || techStackControls.length === 0) return;
+
+  const scrollByViewport = (direction) => {
+    const maxScroll = techStackRow.scrollWidth - techStackRow.clientWidth;
+    const delta = Math.max(0, techStackRow.clientWidth - 48);
+    const target = direction === "next"
+      ? Math.min(maxScroll, techStackRow.scrollLeft + delta)
+      : Math.max(0, techStackRow.scrollLeft - delta);
+    const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduce) {
+      techStackRow.scrollLeft = target;
+    } else {
+      techStackRow.scrollTo({ left: target, behavior: "smooth" });
+    }
+    if (target === maxScroll) {
+      window.setTimeout(() => {
+        techStackRow.scrollLeft = maxScroll;
+      }, prefersReduce ? 0 : 240);
+    }
+  };
+
+  techStackControls.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!btn.classList.contains("is-available")) return;
+      const dir = btn.getAttribute("data-techstack-scroll");
+      scrollByViewport(dir);
+    });
+  });
+
+  techStackRow.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      scrollByViewport("next");
+    }
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      scrollByViewport("prev");
+    }
+  });
+
+  const scheduleUpdate = () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(updateTechStackControls);
+    });
+  };
+
+  scheduleUpdate();
+  techStackRow.addEventListener("scroll", updateTechStackControls, { passive: true });
+  window.addEventListener("resize", scheduleUpdate);
+
+  techStackRow.querySelectorAll("img").forEach((img) => {
+    img.addEventListener("load", scheduleUpdate, { once: true });
+    img.addEventListener("error", scheduleUpdate, { once: true });
+  });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(scheduleUpdate).catch(() => {});
+  }
+}
+
+initTechStackControls();
 
 function replaySubtitleReveal() {
   if (prefersReducedMotion || !heroSection) return;

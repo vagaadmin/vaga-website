@@ -48,7 +48,29 @@
   "products": {
     "label": "E-commerce",
     "title": "End-to-end commerce infrastructure for grocery retail.",
-    "subline": "A modular, API-first platform running storefront, orders, logistics, and ERP integrations at enterprise scale."
+    "subline": "A modular, API-first platform running storefront, orders, logistics, and ERP integrations at enterprise scale.",
+    "techstack": {
+      "headline": "Production-grade tech stack, proven in real operations."
+    },
+    "domains": {
+      "platform": {
+        "title": "Platform Architecture",
+        "desc": "Event-driven backend with async workflows and strict domain boundaries."
+      },
+      "client": {
+        "title": "Client Applications",
+        "desc": "Multi-channel web and mobile clients built on shared, contract-safe APIs."
+      },
+      "infrastructure": {
+        "title": "Infrastructure & Operations",
+        "desc": "Container-first delivery with environment parity and controlled scaling."
+      },
+      "observability": {
+        "title": "Observability & Contracts",
+        "desc": "End-to-end tracing and contract-driven integration to prevent drift."
+      }
+    },
+    "trademark": "All trademarks and logos are the property of their respective owners."
   },
   "trust": {
     "title": "Trust & Scale",

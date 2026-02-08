@@ -1,4 +1,23 @@
 export default function products() {
+  const techStackItems = [
+    { slug: "dotnet", label: ".NET" },
+    { slug: "aspnetcore", iconSlug: "dotnet", label: "Web APIs" },
+    { slug: "efcore", iconSlug: "dotnet", label: "EF Core" },
+    { slug: "masstransit", label: "MassTransit", textOnly: true },
+    { slug: "rabbitmq", label: "RabbitMQ" },
+    { slug: "azureservicebus", label: "Azure Service Bus" },
+    { slug: "react", label: "React" },
+    { slug: "nextjs", label: "Next.js" },
+    { slug: "typescript", label: "TypeScript" },
+    { slug: "reactnative", label: "React Native" },
+    { slug: "azure", label: "Azure" },
+    { slug: "docker", label: "Docker" },
+    { slug: "kubernetes", label: "Kubernetes" },
+    { slug: "helm", label: "Helm" },
+    { slug: "opentelemetry", label: "OpenTelemetry" },
+    { slug: "openapi", label: "OpenAPI" }
+  ];
+
   return `
     <section id="products" class="products" aria-labelledby="products-title">
       <div class="content">
@@ -15,6 +34,94 @@ export default function products() {
               <h3 id="products-hero-title" class="products-hero__title" data-i18n="products.title">End-to-end commerce infrastructure for grocery retail.</h3>
               <p class="products-hero__subline" data-i18n="products.subline">A modular, API-first platform that runs digital storefront, order management, picking, logistics, and ERP connectivity — designed for enterprise-scale operations.</p>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="products-techstack">
+        <div class="content">
+          <div class="products-techstack__header">
+            <h3 class="products-techstack__headline" data-i18n="products.techstack.headline">Production-grade tech stack, proven in real operations.</h3>
+          </div>
+          <div class="products-techstack__scroller">
+            <div class="products-techstack__row" aria-label="Tech stack" tabindex="0">
+              ${techStackItems.map((item) => `
+                <div class="products-techstack__item${item.textOnly ? " is-text-only" : ""}" data-techstack="${item.slug}">
+                  ${item.textOnly ? `
+                    <span class="products-techstack__logo-text">${item.label}</span>
+                  ` : `
+                    <img
+                      class="products-techstack__img"
+                      src="/media/tech/${item.iconSlug || item.slug}.svg"
+                      alt="${item.label} logo"
+                      loading="lazy"
+                      onerror="this.style.display='none'; this.closest('.products-techstack__item').classList.add('is-fallback');"
+                    />
+                  `}
+                  ${item.textOnly ? "" : `
+                    <div class="products-techstack__logo">${item.label}</div>
+                  `}
+                  <div class="products-techstack__label">${item.label}</div>
+                </div>
+              `).join("")}
+            </div>
+            <div class="products-techstack__controls" aria-hidden="true">
+              <button class="products-techstack__control products-techstack__control--prev" type="button" data-techstack-scroll="prev" aria-label="Scroll tech stack left">
+                <span aria-hidden="true">←</span>
+              </button>
+              <button class="products-techstack__control products-techstack__control--next" type="button" data-techstack-scroll="next" aria-label="Scroll tech stack right">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+          <p class="products-trademark" data-i18n="products.trademark">All trademarks and logos are the property of their respective owners.</p>
+        </div>
+      </div>
+      <div class="products-domains">
+        <div class="content">
+          <div class="products-domains__list">
+            <article class="products-domain">
+              <h3 class="products-domain__title" data-i18n="products.domains.platform.title">Platform Architecture</h3>
+              <p class="products-domain__desc" data-i18n="products.domains.platform.desc">Event-driven backend with async workflows and strict domain boundaries.</p>
+              <div class="products-domain__logos" aria-label="Platform Architecture technologies">
+                <span class="products-domain__logo">.NET 8</span>
+                <span class="products-domain__logo">EF Core</span>
+                <span class="products-domain__logo">MassTransit</span>
+                <span class="products-domain__logo">RabbitMQ</span>
+                <span class="products-domain__logo">Azure Service Bus</span>
+              </div>
+            </article>
+            <article class="products-domain">
+              <h3 class="products-domain__title" data-i18n="products.domains.client.title">Client Applications</h3>
+              <p class="products-domain__desc" data-i18n="products.domains.client.desc">Multi-channel web and mobile clients built on shared, contract-safe APIs.</p>
+              <div class="products-domain__logos" aria-label="Client Applications technologies">
+                <span class="products-domain__logo">React</span>
+                <span class="products-domain__logo">Next.js</span>
+                <span class="products-domain__logo">TypeScript</span>
+                <span class="products-domain__logo">React Native</span>
+                <span class="products-domain__logo">OpenAPI</span>
+              </div>
+            </article>
+            <article class="products-domain">
+              <h3 class="products-domain__title" data-i18n="products.domains.infrastructure.title">Infrastructure & Operations</h3>
+              <p class="products-domain__desc" data-i18n="products.domains.infrastructure.desc">Container-first delivery with environment parity and controlled scaling.</p>
+              <div class="products-domain__logos" aria-label="Infrastructure and Operations technologies">
+                <span class="products-domain__logo">Azure</span>
+                <span class="products-domain__logo">Docker</span>
+                <span class="products-domain__logo">Kubernetes</span>
+                <span class="products-domain__logo">Helm</span>
+                <span class="products-domain__logo">Cloudflare</span>
+              </div>
+            </article>
+            <article class="products-domain">
+              <h3 class="products-domain__title" data-i18n="products.domains.observability.title">Observability & Contracts</h3>
+              <p class="products-domain__desc" data-i18n="products.domains.observability.desc">End-to-end tracing and contract-driven integration to prevent drift.</p>
+              <div class="products-domain__logos" aria-label="Observability and Contracts technologies">
+                <span class="products-domain__logo">OpenTelemetry</span>
+                <span class="products-domain__logo">Application Insights</span>
+                <span class="products-domain__logo">OpenAPI/Swagger</span>
+                <span class="products-domain__logo">FluentValidation</span>
+              </div>
+            </article>
           </div>
         </div>
       </div>

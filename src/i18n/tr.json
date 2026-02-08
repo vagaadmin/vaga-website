@@ -48,7 +48,29 @@
   "products": {
     "label": "E-ticaret",
     "title": "Market perakendesi için uçtan uca ticaret altyapısı.",
-    "subline": "Dijital mağaza, sipariş yönetimi, toplama, lojistik ve ERP bağlantılarını uçtan uca yürüten modüler, API‑öncelikli bir platform — kurumsal ölçekte operasyonlar için tasarlandı."
+    "subline": "Dijital mağaza, sipariş yönetimi, toplama, lojistik ve ERP bağlantılarını uçtan uca yürüten modüler, API‑öncelikli bir platform — kurumsal ölçekte operasyonlar için tasarlandı.",
+    "techstack": {
+      "headline": "Üretim ortamında kanıtlanmış, sahada test edilmiş teknoloji temeli."
+    },
+    "domains": {
+      "platform": {
+        "title": "Platform Mimarisi",
+        "desc": "Asenkron iş akışları ve sıkı alan sınırlarıyla olay güdümlü bir backend."
+      },
+      "client": {
+        "title": "İstemci Uygulamaları",
+        "desc": "Paylaşılan, sözleşme güvenli API'ler üzerine kurulu çok kanallı web ve mobil istemciler."
+      },
+      "infrastructure": {
+        "title": "Altyapı ve Operasyonlar",
+        "desc": "Ortam eşliği ve kontrollü ölçekleme ile konteyner-öncelikli teslimat."
+      },
+      "observability": {
+        "title": "Gözlemlenebilirlik ve Sözleşmeler",
+        "desc": "Sapmaları önlemek için uçtan uca izleme ve sözleşme odaklı entegrasyon."
+      }
+    },
+    "trademark": "Tüm ticari markalar ve logolar ilgili sahiplerine aittir."
   },
   "trust": {
     "title": "Trust & Scale",

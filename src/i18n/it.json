@@ -48,7 +48,29 @@
   "products": {
     "label": "E-commerce",
     "title": "Infrastruttura commerce end‑to‑end per il retail grocery.",
-    "subline": "Una piattaforma modulare e API‑first che gestisce storefront digitale, gestione ordini, picking, logistica e connettività ERP — progettata per operazioni su scala enterprise."
+    "subline": "Una piattaforma modulare e API‑first che gestisce storefront digitale, gestione ordini, picking, logistica e connettività ERP — progettata per operazioni su scala enterprise.",
+    "techstack": {
+      "headline": "Stack tecnologico production-grade, comprovato in operazioni reali."
+    },
+    "domains": {
+      "platform": {
+        "title": "Architettura di Piattaforma",
+        "desc": "Backend event-driven con workflow asincroni e confini di dominio rigorosi."
+      },
+      "client": {
+        "title": "Applicazioni Client",
+        "desc": "Client web e mobile multicanale basati su API condivise e sicure per contratto."
+      },
+      "infrastructure": {
+        "title": "Infrastruttura e Operations",
+        "desc": "Consegna container-first con parità degli ambienti e scaling controllato."
+      },
+      "observability": {
+        "title": "Osservabilità e Contratti",
+        "desc": "Tracing end-to-end e integrazione contract-driven per prevenire drift."
+      }
+    },
+    "trademark": "Tutti i marchi e i loghi sono di proprietà dei rispettivi titolari."
   },
   "trust": {
     "title": "Trust & Scale",
