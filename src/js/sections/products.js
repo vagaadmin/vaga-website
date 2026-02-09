@@ -129,10 +129,10 @@ export default function products() {
         <div class="content">
           <div class="product-suite__header">
             <h2 class="product-suite__title">Product suite</h2>
-            <p class="product-suite__lead">Storefront, picking, and operations apps built for grocery retail.</p>
           </div>
           <div class="product-suite__layout">
             <div class="product-suite__media">
+              <p class="product-suite__lead">Everything you need to operate modern grocery commerce at scale</p>
               <img
                 class="product-suite__image"
                 src="/media/products/product-suite-hero.png"
