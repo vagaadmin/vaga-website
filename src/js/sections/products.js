@@ -148,6 +148,11 @@ export default function products() {
                   <span class="product-suite__tag">SSR/ISR</span>
                   <span class="product-suite__tag">White-label</span>
                 </div>
+                <span class="product-suite__badge product-suite__badge--web" aria-label="Web app">
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0c2.5 2.7 2.5 15.3 0 18m0-18c-2.5 2.7-2.5 15.3 0 18M3 12h18M4.5 7.5h15M4.5 16.5h15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
               </article>
               <article class="product-suite__card">
                 <h3 class="product-suite__card-title">Storefront Mobile</h3>
@@ -157,6 +162,12 @@ export default function products() {
                   <span class="product-suite__tag">White-label</span>
                   <span class="product-suite__tag">Fast UX</span>
                 </div>
+                <span class="product-suite__badge product-suite__badge--mobile" aria-label="Mobile app">
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <rect x="7" y="3.5" width="10" height="17" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <circle cx="12" cy="17.5" r="0.9" fill="currentColor"/>
+                  </svg>
+                </span>
               </article>
               <article class="product-suite__card">
                 <h3 class="product-suite__card-title">Picking & Distribution</h3>
@@ -166,6 +177,12 @@ export default function products() {
                   <span class="product-suite__tag">Real-time</span>
                   <span class="product-suite__tag">Workflow</span>
                 </div>
+                <span class="product-suite__badge product-suite__badge--mobile" aria-label="Mobile app">
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <rect x="7" y="3.5" width="10" height="17" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <circle cx="12" cy="17.5" r="0.9" fill="currentColor"/>
+                  </svg>
+                </span>
               </article>
               <article class="product-suite__card">
                 <h3 class="product-suite__card-title">Office</h3>
@@ -175,6 +192,11 @@ export default function products() {
                   <span class="product-suite__tag">RBAC</span>
                   <span class="product-suite__tag">Backoffice</span>
                 </div>
+                <span class="product-suite__badge product-suite__badge--web" aria-label="Web app">
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0c2.5 2.7 2.5 15.3 0 18m0-18c-2.5 2.7-2.5 15.3 0 18M3 12h18M4.5 7.5h15M4.5 16.5h15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
               </article>
             </div>
           </div>
