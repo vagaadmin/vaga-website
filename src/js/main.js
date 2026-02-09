@@ -34,6 +34,21 @@ if (emailEl) {
 const initialLang = detectLanguage();
 applyTranslations(initialLang);
 
+function updateTrustMarkets() {
+  const listEl = document.querySelector("[data-trust-markets]");
+  if (!listEl) return;
+  const locale = document.documentElement.lang || navigator.language || "en";
+  const names = new Intl.DisplayNames([locale], { type: "region" });
+  const codes = ["TR", "IT", "DE", "US", "MT"];
+  const labels = codes.map((code) => {
+    if (code === "TR") return "Türkiye";
+    return names.of(code) || code;
+  });
+  listEl.innerHTML = labels.map((label) => `<span>${label}</span>`).join("");
+}
+
+updateTrustMarkets();
+
 function applyHeroTitleLines() {
   const titleEl = document.querySelector("[data-reveal=\"lines\"]");
   if (!titleEl) return;
@@ -69,6 +84,7 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
     applyTranslations(lang);
+    updateTrustMarkets();
     applyHeroTitleLines();
     replaySubtitleReveal();
     replayCtaReveal();
