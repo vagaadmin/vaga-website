@@ -125,6 +125,61 @@ export default function products() {
           </div>
         </div>
       </div>
+      <div class="product-suite">
+        <div class="content">
+          <div class="product-suite__header">
+            <h2 class="product-suite__title">Product suite</h2>
+            <p class="product-suite__lead">Storefront, picking, and operations apps built for grocery retail.</p>
+          </div>
+          <div class="product-suite__layout">
+            <div class="product-suite__media">
+              <img
+                class="product-suite__image"
+                src="/media/products/product-suite-hero.png"
+                alt="Storefront web & mobile, picking & distribution, office applications"
+              />
+            </div>
+            <div class="product-suite__cards">
+              <article class="product-suite__card">
+                <h3 class="product-suite__card-title">Storefront Web</h3>
+                <p class="product-suite__card-desc">Customer-facing web storefront with catalog, campaigns, and checkout.</p>
+                <div class="product-suite__tags">
+                  <span class="product-suite__tag">Web</span>
+                  <span class="product-suite__tag">SSR/ISR</span>
+                  <span class="product-suite__tag">White-label</span>
+                </div>
+              </article>
+              <article class="product-suite__card">
+                <h3 class="product-suite__card-title">Storefront Mobile</h3>
+                <p class="product-suite__card-desc">Mobile shopping experience for repeat orders and personalized discovery.</p>
+                <div class="product-suite__tags">
+                  <span class="product-suite__tag">iOS/Android</span>
+                  <span class="product-suite__tag">White-label</span>
+                  <span class="product-suite__tag">Fast UX</span>
+                </div>
+              </article>
+              <article class="product-suite__card">
+                <h3 class="product-suite__card-title">Picking & Distribution</h3>
+                <p class="product-suite__card-desc">In-store picker app to manage orders, substitutions, and packing flows.</p>
+                <div class="product-suite__tags">
+                  <span class="product-suite__tag">Operations</span>
+                  <span class="product-suite__tag">Real-time</span>
+                  <span class="product-suite__tag">Workflow</span>
+                </div>
+              </article>
+              <article class="product-suite__card">
+                <h3 class="product-suite__card-title">Office</h3>
+                <p class="product-suite__card-desc">Admin console for catalog, pricing, orders, and operational control.</p>
+                <div class="product-suite__tags">
+                  <span class="product-suite__tag">Admin</span>
+                  <span class="product-suite__tag">RBAC</span>
+                  <span class="product-suite__tag">Backoffice</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   `;
 }
