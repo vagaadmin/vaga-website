@@ -12,6 +12,8 @@ import contact from "./sections/contact.js";
 import footer from "./sections/footer.js";
 
 const main = document.getElementById("main");
+const navToggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
 
 main.innerHTML = [
   hero(),
@@ -49,6 +51,56 @@ function updateTrustMarkets() {
 }
 
 updateTrustMarkets();
+
+function closeMobileMenu() {
+  if (!mobileMenu || !navToggle) return;
+  mobileMenu.classList.remove("is-open");
+  mobileMenu.setAttribute("aria-hidden", "true");
+  navToggle.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("no-scroll");
+}
+
+function openMobileMenu() {
+  if (!mobileMenu || !navToggle) return;
+  mobileMenu.classList.add("is-open");
+  mobileMenu.setAttribute("aria-hidden", "false");
+  navToggle.setAttribute("aria-expanded", "true");
+  document.body.classList.add("no-scroll");
+}
+
+if (navToggle && mobileMenu) {
+  navToggle.addEventListener("click", () => {
+    if (mobileMenu.classList.contains("is-open")) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+
+  mobileMenu.addEventListener("click", (event) => {
+    const panel = mobileMenu.querySelector(".mobile-menu__panel");
+    if (panel && !panel.contains(event.target)) {
+      closeMobileMenu();
+    }
+  });
+
+  const handleOutsideClick = (event) => {
+    if (!mobileMenu.classList.contains("is-open")) return;
+    const panel = mobileMenu.querySelector(".mobile-menu__panel");
+    if (panel && !panel.contains(event.target) && !navToggle.contains(event.target)) {
+      closeMobileMenu();
+    }
+  };
+  document.addEventListener("click", handleOutsideClick, true);
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMobileMenu();
+  });
+}
 
 function applyHeroTitleLines() {
   const titleEl = document.querySelector("[data-reveal=\"lines\"]");

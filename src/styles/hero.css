@@ -48,8 +48,8 @@
 .hero-content h1 {
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   line-height: 1.2;
-  max-width: 30ch;
-  margin-bottom: var(--space-3);
+  max-width: clamp(28ch, 60vw, 38ch);
+  margin-bottom: 0.9rem;
   font-weight: 700;
 }
 
@@ -59,10 +59,27 @@
   font-size: clamp(1.125rem, 1.02rem + 0.5vw, 1.25rem);
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1.1rem;
 }
 
 @media (min-width: 1024px) {
   .hero-subtitle { max-width: 52ch; }
+}
+
+@media (max-width: 1024px) {
+  .hero .content {
+    padding-inline: clamp(20px, 5vw, 28px);
+  }
+  .hero-content {
+    padding-top: clamp(4.5rem, 11vw, 6rem);
+    padding-bottom: clamp(2.75rem, 8vw, 4.25rem);
+  }
+  .hero-ctas {
+    gap: 0;
+  }
+  .hero-ctas .button + .button {
+    margin-left: -4px;
+  }
 }
 
 .reveal-title,
@@ -89,6 +106,7 @@
   flex-wrap: wrap;
   opacity: 1;
   transform: none;
+  margin-top: 0;
 }
 
 .hero--ready .hero-ctas {
