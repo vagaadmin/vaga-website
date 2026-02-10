@@ -4,45 +4,45 @@
     "what": "Competenze",
     "how": "Modello di Consegna",
     "products": "E-commerce",
-    "trust": "Trust & Scale",
-    "careers": "Careers",
-    "contact": "Contact"
+    "trust": "Affidabilità & Scala",
+    "careers": "Carriere",
+    "contact": "Contatto"
   },
   "hero": {
-    "title": "Reliable software delivery for long-term business needs.",
-    "subtitle": "A trusted technology partner, building and maintaining critical systems with clarity and care.",
-    "cta_contact": "Contact",
-    "cta_careers": "Careers"
+    "title": "Soluzioni software affidabili per esigenze di lungo periodo.",
+    "subtitle": "Un partner tecnologico di fiducia che progetta e mantiene sistemi critici con rigore e attenzione.",
+    "cta_contact": "Contatto",
+    "cta_careers": "Carriere"
   },
   "what": {
     "title": "Competenze",
-    "lead": "Trasformiamo requisiti complessi in sistemi affidabili.",
+    "lead": "Trasformiamo requisiti complessi in sistemi affidabili e sostenibili nel tempo.",
     "cap1": {
       "title": "Piattaforme software aziendali",
-      "desc": "We design and deliver stable platforms that support core operations."
+      "desc": "Progettiamo e realizziamo piattaforme robuste a supporto delle operazioni principali."
     },
     "cap2": {
       "title": "Integrazione di sistema",
-      "desc": "We connect existing systems to reduce friction and improve flow."
+      "desc": "Integriamo i sistemi esistenti per semplificare i processi e migliorare il flusso operativo."
     },
     "cap3": {
       "title": "Automazione operativa",
-      "desc": "We streamline repeatable processes to improve reliability and speed."
+      "desc": "Automatizziamo i processi ripetitivi per aumentare efficienza operativa e affidabilità."
     }
   },
   "how": {
     "title": "Modello di Consegna",
     "model1": {
-      "title": "Flexible Development (T&M)",
-      "desc": "Adaptive teams that scale with your priorities. We work closely with your stakeholders, keep feedback loops short, and ship in steady increments. Ideal when scope evolves but delivery needs to stay predictable."
+      "title": "Sviluppo Flessibile (T&M)",
+      "desc": "Team adattivi che scalano con le tue priorità. Lavoriamo a stretto contatto con gli stakeholder, manteniamo brevi i cicli di feedback e avanziamo per iterazioni pianificate. Ideale quando i requisiti evolvono nel tempo, ma la consegna deve rimanere prevedibile."
     },
     "model2": {
-      "title": "Turnkey Projects",
-      "desc": "Clear scope delivery with defined outcomes, managed end-to-end by VAGA. We align on requirements, milestones, and acceptance criteria upfront, then execute with disciplined planning and transparent progress. Best for projects where clarity and ownership matter."
+      "title": "Progetti Chiavi in Mano",
+      "desc": "Consegna a scope definito con risultati chiari, gestita end-to-end da VAGA. Allineiamo requisiti, milestone e criteri di accettazione a monte, poi eseguiamo con pianificazione disciplinata e progresso trasparente. Adatto a progetti dove sono fondamentali chiarezza e responsabilità end-to-end."
     },
     "model3": {
-      "title": "Man-Day Engagement",
-      "desc": "Short, focused allocations for well-defined tasks or support needs. We plug into your workflow, resolve targeted items quickly, and leave behind clean handover notes. A practical option for bursts of work without long onboarding."
+      "title": "Ingaggio Man‑Day",
+      "desc": "Interventi brevi e mirati per attività ben definite o esigenze di supporto. Ci integriamo nel tuo workflow, risolviamo rapidamente i punti mirati e lasciamo note di handover pulite. Un modello efficace per esigenze a breve termine, senza onboarding complesso."
     }
   },
   "products": {
@@ -50,58 +50,104 @@
     "title": "Infrastruttura commerce end‑to‑end per il retail grocery.",
     "subline": "Una piattaforma modulare e API‑first che gestisce storefront digitale, gestione ordini, picking, logistica e connettività ERP — progettata per operazioni su scala enterprise.",
     "techstack": {
-      "headline": "Stack tecnologico production-grade, comprovato in operazioni reali."
+      "headline": "Tecnologie production-grade, già collaudate in contesti operativi reali."
     },
     "domains": {
       "platform": {
         "title": "Architettura di Piattaforma",
-        "desc": "Backend event-driven con workflow asincroni e confini di dominio rigorosi."
+        "desc": "Backend event-driven con workflow asincroni e chiara separazione delle responsabilità di dominio."
       },
       "client": {
         "title": "Applicazioni Client",
-        "desc": "Client web e mobile multicanale basati su API condivise e sicure per contratto."
+        "desc": "Client web e mobile multicanale basati su API condivise e contrattuali."
       },
       "infrastructure": {
         "title": "Infrastruttura e Operations",
-        "desc": "Consegna container-first con parità degli ambienti e scaling controllato."
+        "desc": "Consegna container-first con coerenza tra gli ambienti e scaling controllato."
       },
       "observability": {
         "title": "Osservabilità e Contratti",
-        "desc": "Tracing end-to-end e integrazione contract-driven per prevenire drift."
+        "desc": "Tracing end-to-end e integrazione contract-driven per prevenire incoerenze operative."
       }
     },
-    "trademark": "Tutti i marchi e i loghi sono di proprietà dei rispettivi titolari."
+    "trademark": "Tutti i marchi e i loghi sono di proprietà dei rispettivi titolari.",
+    "suite": {
+      "title": "Suite prodotti",
+      "lead": "Tutto ciò che serve per gestire il commercio alimentare moderno su scala",
+      "cards": {
+        "storefront_web": {
+          "title": "Vetrina Web",
+          "desc": "Storefront web customer-facing con catalogo, campagne e checkout.",
+          "tags": {
+            "web": "Web",
+            "ssr_isr": "SSR/ISR",
+            "white_label": "A marchio bianco"
+          }
+        },
+        "storefront_mobile": {
+          "title": "Vetrina Mobile",
+          "desc": "Esperienza di acquisto mobile per riordini e scoperta personalizzata.",
+          "tags": {
+            "ios_android": "iOS/Android",
+            "white_label": "A marchio bianco",
+            "fast_ux": "UX veloce"
+          }
+        },
+        "picking_distribution": {
+          "title": "Picking & Distribuzione",
+          "desc": "App per picker in-store per gestire ordini, sostituzioni, packing e flussi di consegna.",
+          "tags": {
+            "operations": "Operazioni",
+            "real_time": "Tempo reale",
+            "workflow": "Flusso"
+          }
+        },
+        "office": {
+          "title": "Ufficio",
+          "desc": "Console admin per catalogo, pricing, ordini e controllo operativo.",
+          "tags": {
+            "admin": "Amministrazione",
+            "rbac": "RBAC",
+            "backoffice": "Backoffice"
+          }
+        }
+      }
+    }
   },
   "trust": {
-    "title": "Trust & Scale",
+    "title": "Affidabilità & Scala",
     "countries": {
-      "label": "Countries of operation:",
-      "list": "Turkey · Italy · United States · Malta"
+      "label": "Paesi di operatività:",
+      "list": "Turchia · Italia · Stati Uniti · Malta"
     },
-    "statement1": "Long-term partnerships built on consistent delivery.",
-    "statement2": "Calm, dependable execution across complex environments.",
-    "statement3": "Clear communication and accountable collaboration."
+    "statement1": "Partnership di lungo periodo basate su una consegna costante.",
+    "statement2": "Esecuzione calma e affidabile in ambienti complessi.",
+    "statement3": "Comunicazione chiara e collaborazione responsabile.",
+    "headline": "Scelti da team che operano su larga scala, con responsabilità chiare e relazioni di lungo periodo.",
+    "markets": {
+      "label": "Mercati serviti"
+    }
   },
   "careers": {
-    "title": "Careers",
-    "intro": "We work with professionals who value clarity, responsibility, and steady progress.",
+    "title": "Carriere",
+    "intro": "Lavoriamo con professionisti che valorizzano chiarezza, responsabilità e progresso costante.",
     "form": {
-      "name": "Name",
+      "name": "Nome",
       "email": "Email",
-      "message": "Message",
-      "cv": "Optional CV link (URL)",
-      "submit": "Send Application"
+      "message": "Messaggio",
+      "cv": "Link CV opzionale (URL)",
+      "submit": "Invia candidatura"
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contatto",
     "email_label": "Email:",
     "email": "contact@vaga.tech",
     "form": {
-      "name": "Name",
+      "name": "Nome",
       "email": "Email",
-      "message": "Message",
-      "submit": "Send Message"
+      "message": "Messaggio",
+      "submit": "Invia messaggio"
     }
   },
   "footer": "VAGA Technology Inc."

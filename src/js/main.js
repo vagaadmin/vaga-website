@@ -40,8 +40,9 @@ function updateTrustMarkets() {
   const locale = document.documentElement.lang || navigator.language || "en";
   const names = new Intl.DisplayNames([locale], { type: "region" });
   const codes = ["TR", "IT", "DE", "US", "MT"];
+  const isTr = locale.toLowerCase().startsWith("tr");
   const labels = codes.map((code) => {
-    if (code === "TR") return "Türkiye";
+    if (code === "TR") return isTr ? "Türkiye" : (names.of(code) || code);
     return names.of(code) || code;
   });
   listEl.innerHTML = labels.map((label) => `<span>${label}</span>`).join("");

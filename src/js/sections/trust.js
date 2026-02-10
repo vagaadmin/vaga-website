@@ -18,9 +18,9 @@ export default function trust() {
     <section id="trust" aria-labelledby="trust-title">
       <div class="content">
         <h2 id="trust-title" data-i18n="trust.title">Trust &amp; Scale</h2>
-        <p class="trust-headline">Trusted by teams operating at scale, with clear ownership and lasting relations.</p>
+        <p class="trust-headline" data-i18n="trust.headline">Trusted by teams operating at scale, with clear ownership and lasting relations.</p>
         <div class="trust-markets">
-          <p class="trust-markets__label">Markets served</p>
+          <p class="trust-markets__label" data-i18n="trust.markets.label">Markets served</p>
           <p class="trust-markets__list" data-trust-markets></p>
         </div>
         <div class="trust-logos" aria-label="Trust & Scale logos">

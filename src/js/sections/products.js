@@ -128,11 +128,11 @@ export default function products() {
       <div class="product-suite">
         <div class="content">
           <div class="product-suite__header">
-            <h2 class="product-suite__title">Product suite</h2>
+            <h2 class="product-suite__title" data-i18n="products.suite.title">Product suite</h2>
           </div>
           <div class="product-suite__layout">
             <div class="product-suite__media">
-              <p class="product-suite__lead">Everything you need to operate modern grocery commerce at scale</p>
+              <p class="product-suite__lead" data-i18n="products.suite.lead">Everything you need to operate modern grocery commerce at scale</p>
               <img
                 class="product-suite__image"
                 src="/media/products/product-suite-hero.png"
@@ -141,12 +141,12 @@ export default function products() {
             </div>
             <div class="product-suite__cards">
               <article class="product-suite__card">
-                <h3 class="product-suite__card-title">Storefront Web</h3>
-                <p class="product-suite__card-desc">Customer-facing web storefront with catalog, campaigns, and checkout.</p>
+                <h3 class="product-suite__card-title" data-i18n="products.suite.cards.storefront_web.title">Storefront Web</h3>
+                <p class="product-suite__card-desc" data-i18n="products.suite.cards.storefront_web.desc">Customer-facing web storefront with catalog, campaigns, and checkout.</p>
                 <div class="product-suite__tags">
-                  <span class="product-suite__tag">Web</span>
-                  <span class="product-suite__tag">SSR/ISR</span>
-                  <span class="product-suite__tag">White-label</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.storefront_web.tags.web">Web</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.storefront_web.tags.ssr_isr">SSR/ISR</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.storefront_web.tags.white_label">White-label</span>
                 </div>
                 <span class="product-suite__badge product-suite__badge--web" aria-label="Web app">
                   <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
@@ -155,12 +155,12 @@ export default function products() {
                 </span>
               </article>
               <article class="product-suite__card">
-                <h3 class="product-suite__card-title">Storefront Mobile</h3>
-                <p class="product-suite__card-desc">Mobile shopping experience for repeat orders and personalized discovery.</p>
+                <h3 class="product-suite__card-title" data-i18n="products.suite.cards.storefront_mobile.title">Storefront Mobile</h3>
+                <p class="product-suite__card-desc" data-i18n="products.suite.cards.storefront_mobile.desc">Mobile shopping experience for repeat orders and personalized discovery.</p>
                 <div class="product-suite__tags">
-                  <span class="product-suite__tag">iOS/Android</span>
-                  <span class="product-suite__tag">White-label</span>
-                  <span class="product-suite__tag">Fast UX</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.storefront_mobile.tags.ios_android">iOS/Android</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.storefront_mobile.tags.white_label">White-label</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.storefront_mobile.tags.fast_ux">Fast UX</span>
                 </div>
                 <span class="product-suite__badge product-suite__badge--mobile" aria-label="Mobile app">
                   <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
@@ -170,12 +170,12 @@ export default function products() {
                 </span>
               </article>
               <article class="product-suite__card">
-                <h3 class="product-suite__card-title">Picking & Distribution</h3>
-                <p class="product-suite__card-desc">In-store picker app to manage orders, substitutions, and packing flows.</p>
+                <h3 class="product-suite__card-title" data-i18n="products.suite.cards.picking_distribution.title">Picking & Distribution</h3>
+                <p class="product-suite__card-desc" data-i18n="products.suite.cards.picking_distribution.desc">In-store picker app to manage orders, substitutions, and packing flows.</p>
                 <div class="product-suite__tags">
-                  <span class="product-suite__tag">Operations</span>
-                  <span class="product-suite__tag">Real-time</span>
-                  <span class="product-suite__tag">Workflow</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.picking_distribution.tags.operations">Operations</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.picking_distribution.tags.real_time">Real-time</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.picking_distribution.tags.workflow">Workflow</span>
                 </div>
                 <span class="product-suite__badge product-suite__badge--mobile" aria-label="Mobile app">
                   <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
@@ -185,12 +185,12 @@ export default function products() {
                 </span>
               </article>
               <article class="product-suite__card">
-                <h3 class="product-suite__card-title">Office</h3>
-                <p class="product-suite__card-desc">Admin console for catalog, pricing, orders, and operational control.</p>
+                <h3 class="product-suite__card-title" data-i18n="products.suite.cards.office.title">Office</h3>
+                <p class="product-suite__card-desc" data-i18n="products.suite.cards.office.desc">Admin console for catalog, pricing, orders, and operational control.</p>
                 <div class="product-suite__tags">
-                  <span class="product-suite__tag">Admin</span>
-                  <span class="product-suite__tag">RBAC</span>
-                  <span class="product-suite__tag">Backoffice</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.office.tags.admin">Admin</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.office.tags.rbac">RBAC</span>
+                  <span class="product-suite__tag" data-i18n="products.suite.cards.office.tags.backoffice">Backoffice</span>
                 </div>
                 <span class="product-suite__badge product-suite__badge--web" aria-label="Web app">
                   <svg viewBox="0 0 24 24" role="img" aria-hidden="true">

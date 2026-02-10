@@ -70,7 +70,49 @@
         "desc": "End-to-end tracing and contract-driven integration to prevent drift."
       }
     },
-    "trademark": "All trademarks and logos are the property of their respective owners."
+    "trademark": "All trademarks and logos are the property of their respective owners.",
+    "suite": {
+      "title": "Product suite",
+      "lead": "Everything you need to operate modern grocery commerce at scale",
+      "cards": {
+        "storefront_web": {
+          "title": "Storefront Web",
+          "desc": "Customer-facing web storefront with catalog, campaigns, and checkout.",
+          "tags": {
+            "web": "Web",
+            "ssr_isr": "SSR/ISR",
+            "white_label": "White-label"
+          }
+        },
+        "storefront_mobile": {
+          "title": "Storefront Mobile",
+          "desc": "Mobile shopping experience for repeat orders and personalized discovery.",
+          "tags": {
+            "ios_android": "iOS/Android",
+            "white_label": "White-label",
+            "fast_ux": "Fast UX"
+          }
+        },
+        "picking_distribution": {
+          "title": "Picking & Distribution",
+          "desc": "In-store picker app to manage orders, substitutions, and packing flows.",
+          "tags": {
+            "operations": "Operations",
+            "real_time": "Real-time",
+            "workflow": "Workflow"
+          }
+        },
+        "office": {
+          "title": "Office",
+          "desc": "Admin console for catalog, pricing, orders, and operational control.",
+          "tags": {
+            "admin": "Admin",
+            "rbac": "RBAC",
+            "backoffice": "Backoffice"
+          }
+        }
+      }
+    }
   },
   "trust": {
     "title": "Trust & Scale",
@@ -80,7 +122,11 @@
     },
     "statement1": "Long-term partnerships built on consistent delivery.",
     "statement2": "Calm, dependable execution across complex environments.",
-    "statement3": "Clear communication and accountable collaboration."
+    "statement3": "Clear communication and accountable collaboration.",
+    "headline": "Trusted by teams operating at scale, with clear ownership and lasting relations.",
+    "markets": {
+      "label": "Markets served"
+    }
   },
   "careers": {
     "title": "Careers",

@@ -4,104 +4,150 @@
     "what": "Yetkinlikler",
     "how": "Teslimat Modeli",
     "products": "E-ticaret",
-    "trust": "Trust & Scale",
-    "careers": "Careers",
-    "contact": "Contact"
+    "trust": "Güven & Ölçek",
+    "careers": "Kariyer",
+    "contact": "İletişim"
   },
   "hero": {
-    "title": "Reliable software delivery for long-term business needs.",
-    "subtitle": "A trusted technology partner, building and maintaining critical systems with clarity and care.",
-    "cta_contact": "Contact",
-    "cta_careers": "Careers"
+    "title": "Uzun vadeli iş ihtiyaçlarını destekleyen güvenilir yazılım çözümleri.",
+    "subtitle": "Kritik sistemleri disiplinle kuran ve sürdüren teknoloji ortağı.",
+    "cta_contact": "İletişim",
+    "cta_careers": "Kariyer"
   },
   "what": {
     "title": "Yetkinlikler",
-    "lead": "Karmaşık ihtiyaçları güvenilir sistemlere dönüştürüyoruz.",
+    "lead": "Karmaşık iş ihtiyaçlarını güvenilir sistemlere dönüştürüyoruz.",
     "cap1": {
       "title": "İş yazılım platformları",
-      "desc": "We design and deliver stable platforms that support core operations."
+      "desc": "Temel operasyonları destekleyen, uzun ömürlü ve sürdürülebilir platformlar tasarlayıp teslim ediyoruz."
     },
     "cap2": {
       "title": "Sistem entegrasyonu",
-      "desc": "We connect existing systems to reduce friction and improve flow."
+      "desc": "Mevcut sistemleri entegre ederek operasyonel akışı sadeleştiriyoruz."
     },
     "cap3": {
       "title": "Operasyonel otomasyon",
-      "desc": "We streamline repeatable processes to improve reliability and speed."
+      "desc": "Tekrarlayan süreçleri otomatikleştirerek operasyonel verimliliği artırıyoruz."
     }
   },
   "how": {
     "title": "Teslimat Modeli",
     "model1": {
-      "title": "Flexible Development (T&M)",
-      "desc": "Adaptive teams that scale with your priorities. We work closely with your stakeholders, keep feedback loops short, and ship in steady increments. Ideal when scope evolves but delivery needs to stay predictable."
+      "title": "Esnek Geliştirme (T&M)",
+      "desc": "İş önceliklerinize göre ölçeklenen esnek ekiplerle çalışma modeli. Paydaşlarınızla yakın çalışır, geri bildirimleri hızlıca sürece yansıtır ve planlı adımlarla ilerleriz. İhtiyaçların zaman içinde netleştiği, ancak teslimat disiplininin korunması gereken projeler için uygundur."
     },
     "model2": {
-      "title": "Turnkey Projects",
-      "desc": "Clear scope delivery with defined outcomes, managed end-to-end by VAGA. We align on requirements, milestones, and acceptance criteria upfront, then execute with disciplined planning and transparent progress. Best for projects where clarity and ownership matter."
+      "title": "Anahtar Teslim Projeler",
+      "desc": "Net kapsamla tanımlı çıktılar; uçtan uca VAGA tarafından yönetilir. Gereksinimler, kilometre taşları ve kabul kriterlerinde baştan hizalanır, disiplinli planlama ve şeffaf ilerlemeyle yürütülür. Netlik, sorumluluk ve uçtan uca sahipliğin önemli olduğu projeler için uygundur."
     },
     "model3": {
-      "title": "Man-Day Engagement",
-      "desc": "Short, focused allocations for well-defined tasks or support needs. We plug into your workflow, resolve targeted items quickly, and leave behind clean handover notes. A practical option for bursts of work without long onboarding."
+      "title": "Adam-Gün Çalışması",
+      "desc": "Tanımlı işlere veya destek ihtiyaçlarına yönelik kısa süreli, odaklı çalışmalar. İş akışınıza hızlıca entegre olur, hedefli işleri çözer ve net devir ile dokümantasyon sağlar. Kısa süreli ihtiyaçlar için hızlı ve etkili bir çalışma modelidir."
     }
   },
   "products": {
     "label": "E-ticaret",
-    "title": "Market perakendesi için uçtan uca ticaret altyapısı.",
-    "subline": "Dijital mağaza, sipariş yönetimi, toplama, lojistik ve ERP bağlantılarını uçtan uca yürüten modüler, API‑öncelikli bir platform — kurumsal ölçekte operasyonlar için tasarlandı.",
+    "title": "Gıda perakendesi için uçtan uca ticaret altyapısı.",
+    "subline": "Dijital mağaza, sipariş yönetimi, toplama, lojistik ve ERP bağlantılarını uçtan uca yürüten modüler, API‑öncelikli bir platform — kurumsal ölçekte operasyonları desteklemek üzere tasarlandı.",
     "techstack": {
-      "headline": "Üretim ortamında kanıtlanmış, sahada test edilmiş teknoloji temeli."
+      "headline": "Üretim ortamlarında kullanılan, sahada kendini kanıtlamış teknolojiler."
     },
     "domains": {
       "platform": {
         "title": "Platform Mimarisi",
-        "desc": "Asenkron iş akışları ve sıkı alan sınırlarıyla olay güdümlü bir backend."
+        "desc": "Asenkron iş akışları ve net sorumluluk ayrımlarıyla olay güdümlü bir backend mimarisi."
       },
       "client": {
         "title": "İstemci Uygulamaları",
-        "desc": "Paylaşılan, sözleşme güvenli API'ler üzerine kurulu çok kanallı web ve mobil istemciler."
+        "desc": "Paylaşılan ve sözleşme bazlı API’ler üzerine kurulu çok kanallı web ve mobil istemciler."
       },
       "infrastructure": {
         "title": "Altyapı ve Operasyonlar",
-        "desc": "Ortam eşliği ve kontrollü ölçekleme ile konteyner-öncelikli teslimat."
+        "desc": "Ortamlar arası tutarlılık ve kontrollü ölçekleme sağlayan, konteyner-öncelikli teslimat yaklaşımı."
       },
       "observability": {
         "title": "Gözlemlenebilirlik ve Sözleşmeler",
-        "desc": "Sapmaları önlemek için uçtan uca izleme ve sözleşme odaklı entegrasyon."
+        "desc": "Olası sorunları erken tespit etmek için uçtan uca izleme ve sözleşme odaklı entegrasyon."
       }
     },
-    "trademark": "Tüm ticari markalar ve logolar ilgili sahiplerine aittir."
+    "trademark": "Tüm ticari markalar ve logolar, ilgili şirketlerin mülkiyetindedir.",
+    "suite": {
+      "title": "Ürün paketi",
+      "lead": "Modern gıda perakendesini büyük ölçekte yürütmek için ihtiyacınız olan her şey",
+      "cards": {
+        "storefront_web": {
+          "title": "Web Mağaza",
+          "desc": "Katalog, kampanyalar ve ödeme akışıyla müşteri odaklı web storefront.",
+          "tags": {
+            "web": "Web",
+            "ssr_isr": "SSR/ISR",
+            "white_label": "Marka bağımsız"
+          }
+        },
+        "storefront_mobile": {
+          "title": "Mobil Mağaza",
+          "desc": "Tekrarlı siparişler ve kişiselleştirilmiş keşif için mobil alışveriş deneyimi.",
+          "tags": {
+            "ios_android": "iOS/Android",
+            "white_label": "Marka bağımsız",
+            "fast_ux": "Hızlı UX"
+          }
+        },
+        "picking_distribution": {
+          "title": "Toplama & Dağıtım",
+          "desc": "Sipariş, ikame, paketleme ve teslimat akışlarını yöneten mağaza içi picker uygulaması.",
+          "tags": {
+            "operations": "Operasyonlar",
+            "real_time": "Gerçek zamanlı",
+            "workflow": "İş akışı"
+          }
+        },
+        "office": {
+          "title": "Ofis",
+          "desc": "Katalog, fiyatlama, siparişler ve operasyonel kontrol için yönetim konsolu.",
+          "tags": {
+            "admin": "Yönetim",
+            "rbac": "RBAC",
+            "backoffice": "Arka ofis"
+          }
+        }
+      }
+    }
   },
   "trust": {
-    "title": "Trust & Scale",
+    "title": "Güven & Ölçek",
     "countries": {
-      "label": "Countries of operation:",
-      "list": "Turkey · Italy · United States · Malta"
+      "label": "Faaliyet gösterilen ülkeler:",
+      "list": "Türkiye · İtalya · Amerika Birleşik Devletleri · Malta"
     },
-    "statement1": "Long-term partnerships built on consistent delivery.",
-    "statement2": "Calm, dependable execution across complex environments.",
-    "statement3": "Clear communication and accountable collaboration."
+    "statement1": "Tutarlı teslimatla kurulan uzun vadeli ortaklıklar.",
+    "statement2": "Karmaşık ortamlarda sakin ve güvenilir yürütme.",
+    "statement3": "Açık iletişim ve hesap verebilir iş birliği.",
+    "headline": "Büyük ölçekte çalışan ekiplerin güvendiği, net sorumluluk anlayışına ve uzun vadeli iş ilişkilerine dayalı bir yaklaşım.",
+    "markets": {
+      "label": "Hizmet sunduğumuz bölgeler"
+    }
   },
   "careers": {
-    "title": "Careers",
-    "intro": "We work with professionals who value clarity, responsibility, and steady progress.",
+    "title": "Kariyer",
+    "intro": "Açıklık, sorumluluk ve düzenli ilerlemeye önem veren profesyonellerle çalışıyoruz.",
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "cv": "Optional CV link (URL)",
-      "submit": "Send Application"
+      "name": "İsim",
+      "email": "E-posta",
+      "message": "Mesaj",
+      "cv": "İsteğe bağlı CV bağlantısı (URL)",
+      "submit": "Başvuru Gönder"
     }
   },
   "contact": {
-    "title": "Contact",
-    "email_label": "Email:",
+    "title": "İletişim",
+    "email_label": "E-posta:",
     "email": "contact@vaga.tech",
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Send Message"
+      "name": "İsim",
+      "email": "E-posta",
+      "message": "Mesaj",
+      "submit": "Mesaj Gönder"
     }
   },
   "footer": "VAGA Technology Inc."
