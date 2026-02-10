@@ -148,6 +148,16 @@
       "email": "E-posta",
       "message": "Mesaj",
       "submit": "Mesaj Gönder"
+    },
+    "cards": {
+      "contact": {
+        "title": "İletişim",
+        "desc": "Genel sorular, iş ortaklıkları veya diğer talepler için bize e-posta gönderin."
+      },
+      "careers": {
+        "title": "Kariyer",
+        "desc": "Açıklık, sorumluluk ve düzenli ilerlemeye değer veriyorsanız sizinle tanışmak isteriz."
+      }
     }
   },
   "footer": "VAGA Technology Inc."

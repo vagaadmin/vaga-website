@@ -148,6 +148,16 @@
       "email": "Email",
       "message": "Messaggio",
       "submit": "Invia messaggio"
+    },
+    "cards": {
+      "contact": {
+        "title": "Contatto",
+        "desc": "Per richieste, partnership o domande generali, scriveteci via email."
+      },
+      "careers": {
+        "title": "Carriere",
+        "desc": "Se valorizzi chiarezza, responsabilità e crescita costante, ci piacerebbe conoscerti."
+      }
     }
   },
   "footer": "VAGA Technology Inc."

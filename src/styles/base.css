@@ -721,6 +721,132 @@ p { margin: 0 0 var(--space-2) 0; }
   max-width: 28ch;
 }
 
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.contact-card {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  background: #fff;
+  transition: transform 220ms ease-out, box-shadow 220ms ease-out;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card h2 {
+  margin: 0 0 0.6rem 0;
+  font-weight: 700;
+}
+
+.contact-card p {
+  margin: 0 0 var(--space-2) 0;
+  color: rgba(15, 23, 42, 0.8);
+}
+
+.contact-card__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--space-3);
+  padding-right: 24px;
+  flex: 1 1 auto;
+}
+
+.contact-card__stripe {
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  align-self: stretch;
+  flex: 0 0 96px;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-card--contact .contact-card__stripe {
+  background-image: url("/media/cards/card-contact-vertical.png");
+}
+
+.contact-card--careers .contact-card__stripe {
+  background-image: url("/media/cards/card-careers-vertical.png");
+}
+
+.contact-card__email {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+  text-decoration: none;
+  transition: border-color 200ms ease, color 200ms ease;
+  margin-top: auto;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.contact-card__email:focus,
+.contact-card__email:hover {
+  text-decoration: none;
+}
+
+.contact-card__tab {
+  width: 52px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.25);
+  margin: 0 0 0.75rem 0;
+}
+
+.contact-card--careers .contact-card__tab {
+  background: rgba(13, 148, 136, 0.28);
+}
+
+@media (max-width: 900px) {
+  .contact-card {
+    flex-direction: row;
+  }
+  .contact-card__stripe {
+    flex-basis: 84px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-card__stripe {
+    flex-basis: 72px;
+  }
+}
+
+.contact-card__email:hover {
+  border-color: rgba(15, 23, 42, 0.3);
+}
+
+@media (max-width: 900px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card {
+    transition: none;
+  }
+  .contact-card:hover {
+    transform: none;
+  }
+}
+
 .cap-card {
   border: none;
   padding: var(--space-3);
