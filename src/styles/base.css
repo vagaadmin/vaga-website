@@ -7,6 +7,7 @@
   --space-5: 3rem;
   --line-height: 1.6;
   --header-h: 64px;
+  --anchor-offset: calc(var(--header-h) - 20px);
 }
 
 * { box-sizing: border-box; }
@@ -18,6 +19,10 @@ html, body {
   color: #111;
 }
 
+html {
+  scroll-padding-top: var(--anchor-offset);
+}
+
 body {
   overflow-x: hidden;
 }
@@ -26,14 +31,26 @@ body.no-scroll {
   overflow: hidden;
 }
 
+:is(#hero, #what-we-do, #how-we-work, #products, #trust, #careers, #contact) {
+  scroll-margin-top: var(--anchor-offset);
+}
+
 a { color: inherit; text-decoration: none; }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 a:focus,
 button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline: none;
 }
 
 header {
@@ -163,6 +180,9 @@ nav a:last-child { margin-right: 0; }
   padding: 0.25rem 0.75rem;
   cursor: pointer;
   color: #111;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-menu__langs span {
@@ -186,11 +206,25 @@ nav a:last-child { margin-right: 0; }
   cursor: pointer;
   color: inherit;
   font-size: 0.85rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .lang-switch span {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
+}
+
+.lang-switch button:focus,
+.mobile-menu__langs button:focus {
+  outline: none;
+}
+
+.lang-switch button:focus-visible,
+.mobile-menu__langs button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 header,
